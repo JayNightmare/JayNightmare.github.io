@@ -1,3 +1,13 @@
+/**
+    * @name Classic-Discord-Theme-With-Changes
+    * @version 0.1.4
+    * @description A SImplier Look At Discord
+    * @author Jay
+    *
+    * Credit: 
+    * - Your Mother
+**/
+
 ::-webkit-scrollbar { /* Removes Scrollbars >:( */
     display: none;
 }
