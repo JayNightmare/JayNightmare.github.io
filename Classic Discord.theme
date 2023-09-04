@@ -1,0 +1,166 @@
+::-webkit-scrollbar { /* Removes Scrollbars >:( */
+    display: none;
+}
+
+.inviteToolbar-2k2nqz > .divider-q3P9HC { /* Removes Border on Toolbar */
+    display: none;
+}
+
+.inviteToolbar-2k2nqz > .iconWrapper-2awDjA { /* Fixes Message Button (Toolbar) */
+    top: -1px;
+    left: 1px;
+}
+
+.container-1oAagU > .scroller-hE2gWq > h2 { /* Aligns "Avitve Now" to Center */
+    text-align: center;
+}
+
+/* Online Friends Message and Menu Buttons */
+[class*=content-yjf30S] > [class*=peopleListItem-] > [class*=listItemContents-] > .actions-YHvpIT > .actionButton-3-B2x- {
+    border-radius: 7px;
+    border: var(--background-modifier-accent) solid 1px;
+}
+
+.wordmarkWindows-2dq6rw > svg  { /* Discord Icon (Top Left) */
+    background: linear-gradient(270deg, #00d49d, #004fd4, #7500d4, #d400a7, #ee3059);
+    background-size: 1000% 1000%;
+    color: black;
+
+    animation: discordAnimation 45s ease-in-out infinite;
+    border-radius: 5px;
+    padding: 1px;
+    left: 50%;
+}
+
+@keyframes discordAnimation { /* Animation of Gradient */
+    0% { background-position:0% 50% }
+    50% { background-position:100% 50% }
+    100% { background-position:0% 50% }
+}
+
+.winButton-3UMjdg { /* Gradient Animaiton For WinButtons (Top Right) */
+    background: linear-gradient(270deg, #00d49d, #004fd4, #7500d4, #d400a7, #ee3059);
+    background-size: 1000% 1000%;
+    border-radius: 5px;
+    color: black;
+
+    animation: discordAnimation 15s ease-in-out infinite;
+}
+
+[aria-label*=Maximise] { /* Pushes Maximise Button */
+    right: 5px;
+}
+
+[aria-label*=Minimise] { /* Pushes Minimise Button */
+    right: 10px;
+}
+
+.sectionTitle-36PWt2 > h2 { /* aligns "Online -" to the center */
+    text-align: center;
+}
+
+.item-3mHhwr + [aria-label=Suggestions] { /* removes suggested friends */
+    display: none;
+}
+
+.menu-2TXYjN > .scroller-nxCRu_ > .item-5ApiZt { /* Popup > Friends List Main */
+    width: fit-content;
+    position: relative;
+    top: 15%;
+    left: 47%;
+    transform: translate(-50%, -50%);
+
+}
+
+[aria-label="User Settings Actions"] { /* Background to "UserActions" */
+    width: fit-content !important;
+    /* background-color: #004fd4 !important; */
+}
+
+/* Moves the emote button on the VC channel status popup */
+.textArea-2duLl5 > .inner-NQg18Y > .buttons-uaqb-5 > .expression-picker-chat-input-button > [aria-label="Select emoji"] {
+    position: relative;
+    right: 10px;
+}
+
+/* VC Channel Member Icons */
+.containerDefault-YUSmu3 > .list-2x9Cl9 > [class*=draggable-] > [class*=voiceUser-] > [class*=content-] > [class*=username-] {
+    display: none;
+}
+
+.containerDefault-YUSmu3 > .list-2x9Cl9 > [class*=draggable-] > [class*=voiceUser-] > [class*=content-] {
+    width: fit-content;
+    padding: 2px;
+    padding-right: 5px;
+}
+
+.containerDefault-YUSmu3 > .list-2x9Cl9 > [class*=draggable-] > [class*=voiceUser-] > [class*=content-] > .icons-2mwuFp > .liveIconSpacing-1SWxCn {
+    position: relative;
+    left: 4.5px;
+}
+/* // */
+
+.actionButtons-2vEOUh > [aria-label="Share Your Screen"] { /* Share Screen Button VC */
+    background: linear-gradient(270deg, #00d49d, #004fd4, #7500d4, #d400a7, #ee3059);
+    background-size: 1000% 1000%;
+
+    animation: discordAnimation 2s ease-in-out infinite;
+}
+
+.actionButtons-2vEOUh > [aria-label="Start an Activity"] { /* Activities Button VC */
+    background-color: pink !important;
+    color: black !important;
+}
+
+[class*=containerDefault-] { /* Channel Size */
+    width: 230px;
+}
+
+/* Removes Invite Button > Channel */
+[class*=children-1MGS9G] {
+    display: none;
+}
+
+.content-1Tgc42 > .icons-2mwuFp > [aria-label="Muted"], .content-1Tgc42 > .icons-2mwuFp > [aria-label="Deafened"] { /* Mute/Deafen Button VC > Channel */
+    border: var(--background-modifier-accent) solid 1px;
+    border-radius: 5px;
+    padding: 3px;
+}
+
+.content-1Tgc42 > .icons-2mwuFp > [aria-label="Deafened"] { /* Deafen Button = Red | Black? */
+    background-color: var(--red-400);
+}
+
+.content-1Tgc42 > .icons-2mwuFp > [aria-label="Deafened"] > svg {
+    color: black;
+}
+
+/* Mute Button VC > Panel */
+.tileChild-2k7Wqh > .overlayContainer-1suEh7 > .overlayBottom-3aKRJM > .statusContainer-2yJ1oM > .status-15kcmy {
+    border-radius: 5px !important;
+    background-color: rgba(0, 0, 0, 0.377);
+    color: beige;
+    border: var(--background-modifier-accent) 1px solid;
+    position: relative;
+    right: 205px; /* Centered */
+}
+
+[class*=live-1V2D-f] { /* Live Button */
+    border-radius: 5px;;
+}
+
+/* Discord Logo > Selected */
+.listItemWrapper-3d87LP > .wrapper-2PSQCG > svg > foreignObject > .selected-1Drb7Z > .childWrapper-1j_1ub {
+    background: linear-gradient(270deg, #00d49d, #004fd4, #7500d4, #d400a7, #ee3059);
+    background-size: 1000% 1000%;
+
+    animation: discordAnimation 2s ease-in-out infinite; /* Line 35 > Animation Keyframe */
+}
+
+[class*=avatarSpeaking-], [class*=speaking-7QZEkv] { /* User Talking > Active Talking */
+    box-shadow: inset 0 0 0 2px rgb(255, 65, 214), inset 0 0 0 3px var(--background-secondary) !important;
+}
+
+.content-3u3YYB > .background-L8lGH6  { /* VC Panel Background */
+    background-color: #004ed400 !important;
+}
