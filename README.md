@@ -1,7 +1,9 @@
 # Classic-Discord-Theme-With-Changes
 Just some changes to the classic discord theme
 
-> Added some changes to the classic discord theme by removing and adding some changes. Looks and feels better
+> Added some changes to the classic discord theme by removing and adding some changes. Looks and feels better.
+
+# Still a WIP features are being added everyday so make sure to watch the project for updates
 
 ![image](https://github.com/JayNightmare/Classic-Discord-Theme-With-Changes/assets/34739807/2303ea38-f1ae-473f-b91e-84951d9d7204)
 
