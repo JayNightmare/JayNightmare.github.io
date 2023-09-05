@@ -120,14 +120,14 @@
 }
 /* // */
 
-.actionButtons-2vEOUh > [aria-label="Share Your Screen"], [aria-label="Share Your Screen"] { /* Share Screen Button VC */
+.actionButtons-2vEOUh > [aria-label="Share Your Screen"], .wrapper-3t3Yqv > div > div > div > div > [aria-label="Share Your Screen"] { /* Share Screen Button VC */
     background: linear-gradient(270deg, #00d49d, #004fd4, #7500d4, #d400a7, #ee3059);
     background-size: 1000% 1000% !important;
 
     animation: discordAnimation 2s ease-in-out infinite !important;
 }
 
-[aria-label="Start an Activity"] { /* Activities Button VC */
+[aria-label="Start an Activity"], .buttonContainer-1sjtPU > div > div > button[aria-label="Start an Activity"] > .contents-3NembX > svg { /* Activities Button VC */
     background-color: pink !important;
     color: black !important;
 }
@@ -155,7 +155,7 @@
     color: black;
 }
 
-/* Mute Button VC > Panel */
+/* Mute Button VC > Overlay Panel */
 .tileChild-2k7Wqh > .overlayContainer-1suEh7 > .overlayBottom-3aKRJM > .statusContainer-2yJ1oM > .status-15kcmy {
     border-radius: 5px !important;
     background-color: rgba(0, 0, 0, 0.377);
@@ -164,9 +164,21 @@
     
 }
 
+/* VC Overlay Icons */
 .tileChild-2k7Wqh > .overlayContainer-1suEh7 > .overlayBottom-3aKRJM > .statusContainer-2yJ1oM {
-    position: relative;
-    right: 380px; /* Centered */
+    position: absolute;
+    right: calc(45.5%);
+}
+
+.button-1EGGcP[aria-label*="You cannot launch Activities in this channel."],
+.button-1EGGcP[aria-label="You can't stream into this channel."],
+.button-1EGGcP[aria-label="Soundboard disabled when suppressed"]  {
+    background-color: #ff0000b0 !important;
+    border-radius: 5px;;
+}
+
+.actionButtons-2vEOUh > div > .buttonColor-3bP3fX  { /* Removes White Haze over soundboard button */
+    background-color: #00d48d00;
 }
 
 [class*=live-1V2D-f] { /* Live Button */
