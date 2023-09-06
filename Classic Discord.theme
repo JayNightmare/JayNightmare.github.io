@@ -31,6 +31,12 @@
     border: var(--background-modifier-accent) solid 1px;
 }
 
+/* ^ Animation For Buttons ^ */
+[class*=content-yjf30S] > [class*=peopleListItem-] > [class*=listItemContents-] > .actions-YHvpIT > .actionButton-3-B2x-:hover {
+    background-color: rgba(0, 0, 0, 0.39);
+    transition: all 0.2s ease-in-out;
+}
+
 .wordmarkWindows-2dq6rw > svg  { /* Discord Icon (Top Left) */
     background: linear-gradient(270deg, #00d49d, #004fd4, #7500d4, #d400a7, #ee3059);
     background-size: 1000% 1000%;
@@ -43,6 +49,12 @@
 }
 
 @keyframes discordAnimation { /* Animation of Gradient */
+    0% { background-position:0% 50% }
+    50% { background-position:100% 50% }
+    100% { background-position:0% 50% }
+}
+
+@keyframes messageBarAnimation { /* Animation of Gradient */
     0% { background-position:0% 50% }
     50% { background-position:100% 50% }
     100% { background-position:0% 50% }
@@ -199,4 +211,104 @@
 
 .content-3u3YYB > .background-L8lGH6  { /* VC Panel Background */
     background-color: #004ed400 !important;
+}
+
+
+/* Message Bar Section */
+/* Right Side */
+.scrollableContainer-15eg7h > .inner-NQg18Y > .buttons-uaqb-5 { /* Message Bar > Right Side Buttons */
+    height: 24px;
+    padding: 10px 5px;
+    position: relative;
+    top: 0;
+    right: 5px;
+}
+
+.scrollableContainer-15eg7h > .inner-NQg18Y > .buttons-uaqb-5 > [aria-label="Send a gift"] > div > div,
+.scrollableContainer-15eg7h > .inner-NQg18Y > .buttons-uaqb-5 > div > [aria-label="Open Translate Modal"] > div > div, 
+.scrollableContainer-15eg7h > .inner-NQg18Y > .buttons-uaqb-5 > div > [aria-label="Open GIF picker"] > div > div, 
+.scrollableContainer-15eg7h > .inner-NQg18Y > .buttons-uaqb-5 > div > [aria-label="Open sticker picker"] > div > div, 
+.scrollableContainer-15eg7h > .inner-NQg18Y > .buttons-uaqb-5 > div > [aria-label="Select emoji"] > div  {
+    padding: 5px 5px;
+    border:var(--background-secondary) 2px solid;
+    border-radius: 5px;
+    background-color: rgba(46, 46, 46, 0.363);
+}
+
+.scrollableContainer-15eg7h > .inner-NQg18Y > .buttons-uaqb-5 > [aria-label="Send a gift"] > div > div:hover,
+.scrollableContainer-15eg7h > .inner-NQg18Y > .buttons-uaqb-5 > div > [aria-label="Open Translate Modal"] > div > div:hover, 
+.scrollableContainer-15eg7h > .inner-NQg18Y > .buttons-uaqb-5 > div > [aria-label="Open GIF picker"] > div > div:hover, 
+.scrollableContainer-15eg7h > .inner-NQg18Y > .buttons-uaqb-5 > div > [aria-label="Open sticker picker"] > div > div:hover, 
+.scrollableContainer-15eg7h > .inner-NQg18Y > .buttons-uaqb-5 > div > [aria-label="Select emoji"] > div:hover {
+    border:var(--background-secondary) 2px solid;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.568);
+    transition: all 0.2s ease-in-out;
+}
+
+.scrollableContainer-15eg7h > .inner-NQg18Y > .buttons-uaqb-5 > div > [aria-label="Open sticker picker"] > div > div {
+    padding: 6.6px;
+}
+
+.scrollableContainer-15eg7h > .inner-NQg18Y > .buttons-uaqb-5 > div > [aria-label="Select emoji"] > div {
+    padding: 6px;
+}
+
+/* Left Side */
+[aria-label="Upload a file or send invites"] > .contents-3NembX {
+    padding: 5px 5px;
+    border:var(--background-secondary) 2px solid;
+    border-radius: 5px;
+    background-color: rgba(46, 46, 46, 0.363);
+}
+
+[aria-label="Upload a file or send invites"] > .contents-3NembX:hover {
+    border:var(--background-secondary) 2px solid;
+    border-radius: 10px;
+    background-color: rgba(0, 0, 0, 0.568);
+    transition: all 0.2s ease-in-out;
+}
+
+/* Whole Message Bar */
+.form-3gdLxP > div > .channelTextArea-1FufC0 > .scrollableContainer-15eg7h {
+    border:var(--background-secondary) 2px solid;
+    position: relative;
+    top: 10px;
+}
+
+.form-3gdLxP > div > .channelTextArea-1FufC0 > .scrollableContainer-15eg7h:hover { /* Message Bar Animation */
+    background: linear-gradient(270deg, #00d49d, #004fd4, #7500d4, #d400a7, #ee3059);
+    background-size: 1000% 1000%;
+    animation: messageBarAnimation 2s ease-in-out infinite; /* Line 41 > Animation Keyframe */
+}
+
+.content-1jQy2l > .chatContent-3KubbW > .messagesWrapper-RpOMA3 { /* Moves Chat Down */
+    position: relative;
+    top: 15px;
+}
+
+.children-3xh0VB > .topic-11NuQZ { /* Channel Desc. */
+    display: flex;
+    justify-content: center;
+    font-weight: 800;
+}
+
+.toolbar-3_r2xA > [href="https://support.discord.com"] { /* Removes Help Button */
+    display: none;
+}
+
+/* Direct Messages > Private +, Create New Channel + */
+.privateChannelsHeaderContainer-1UWASm > .privateChannelRecipientsInviteButtonIcon-1ObKXK,
+.contents-3NembX > .addButtonIcon-3rJeaD {
+    border: var(--background-modifier-accent) 1px solid;
+    background-color: #313338;
+    border-radius: 5px;
+    padding: 2px 2px;
+    position: relative;
+    bottom: calc(15%);
+}
+
+.privateChannelsHeaderContainer-1UWASm > .privateChannelRecipientsInviteButtonIcon-1ObKXK:hover { /* Direct Messages > Private + */
+    background-color: rgba(0, 0, 0, 0.39);
+    transition: all 0.2s ease-in-out;
 }
