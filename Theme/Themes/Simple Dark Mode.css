@@ -1,0 +1,148 @@
+/**
+    * @name Simply Dark Mode
+    * @version 0.4
+    * @description A theme that's nice on your eyes...
+    * @author Jay
+    *
+**/
+
+/* || SERVER ICONS || */
+[class*=listItem-] [class*=wrapper-2PSQCG],
+[class*=listItem-] [class*=wrapper-] > svg > foreignObject
+{
+    mask: none !important;
+    border-radius: 5px;
+}
+
+/* || FOLDER AND ICONS || */
+[class*=wrapper-38slSD] > div > div > [class*=wrapper-2PSQCG] > svg > foreignObject > div > div,
+[class*=wrapper-38slSD] > div > div > [class*=wrapper-2PSQCG] > svg > foreignObject > div > div > div > div
+{
+    mask: none !important;
+    border-radius: 10px;
+}
+
+/* || SERVER UNREAD PILL || */
+[class*=listItem-] > div > span
+{
+    border-radius: 10px;
+}
+
+/* || CHANNELS || */
+[class*=containerDefault-YUSmu3] > div > [class*=unread-]{
+    border-radius: 10px;
+}
+[class*=link-1_kTxV],
+[class*=linkTop-1W1aK6] > div,
+[class*=linkTop-1W1aK6] > [class*=children-]
+{
+    border-radius: 5px;
+}
+
+/* sidebar top , boost progress*/
+.sidebar-1tnWFu {
+    border-radius: 0px !important;
+}
+.progressBar-2yl2pi {
+    border-radius: 0px;
+}
+
+[class*=linkTop-1W1aK6] > [class*=children-] > div > [class*=wrapper-] {
+    /* border: 2px solid green; */
+    border-radius: 0px;
+}
+[class*=linkTop-1W1aK6] > [class*=children-] > div > [class*=wrapper-] > [class*=total] {
+    padding-left: 4px;
+}
+[class*=linkTop-1W1aK6] > [class*=children-] > div > [class*=wrapper-] > span::after {
+    display: none;
+}
+
+[class*=container-YkUktl] > [class*=avatarWrapper-1B9FTW],
+[class*=container-YkUktl] > div > button
+{
+    border-radius: 0px;
+}
+
+/* || TOOLTIPS || */
+[class*=layerContainer-2lfOPe] [class*=disabledPointerEvents-cGr1My] [class*=tooltip-] {
+    border-radius: 0px !important;
+}
+
+/* || POPUP || */
+[id*=popout_] > div, [class*=menu], [class*=menu] [class*=focused]
+{
+    border-radius: 0px;
+}
+
+/* || CHANNELS LOADING PLACEHOLDER || */
+[class*=wrapper-3HVHpV] > div > div > div > div,
+[class*=wrapper-3HVHpV] > div > div > div,
+[class*=wrapper-3HVHpV] > div > div > h3 > div
+{
+    border-radius: 5px !important;
+}
+
+:root, .theme-dark{
+    --interactive-active: rgba(240, 240, 240, 0.671);
+    --channels-default: #d9d9d966;
+    --blurple-replace: #7289DA;
+    --background-primary: rgb(8, 8, 8);
+    --background-secondary: rgb(5, 5, 5);
+    --background-secondary-alt: rgb(15, 15, 15);
+    --background-tertiary: black;
+    --background-accent: rgb(15, 15, 15);
+    --text-link: #00b0f4;
+    --text-normal: #dcddde;
+    --text-muted: #eb1e6a;
+
+}
+
+.themedBackground-3uF0xW {
+    background-color: #350035 !important;
+}
+
+.contents-2MsGLg > span{
+    width: fit-content !important;
+    left: 1% !important;
+
+}
+
+.timestamp-p1Df1m {
+    padding-left: 1%;
+    padding-right: 1%;
+    border-radius: 5px;
+    background-color: #2e2e2e;
+}
+
+.name-28HaxV {
+    color: rgb(204, 204, 204);
+}
+
+.name-3BUDLf {
+    color: pink;
+}
+
+.containerDefault-YUSmu3 {
+    border-left: 5px solid rgba(102, 51, 153, 0.342);
+    border-right: 5px solid rgba(102, 51, 153, 0.342);
+    border-radius: 10px;
+}
+
+.link-1_kTxV {
+    padding-right: 10px;
+}
+
+.wrapper-NhbLHG {
+    padding-right: 8px;
+}
+
+.unread-36eUEm {
+    display: none;
+}
+
+.modeUnread-3Cxepe .name-28HaxV {
+    color: rgb(51, 3, 11) !important;
+    background-color: #eb1e6a;
+    font-weight: 800;
+}
