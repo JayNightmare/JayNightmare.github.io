@@ -1,6 +1,8 @@
-## Reporting a Vulnerability
+# Reporting a Vulnerability
 
 Open an issue with any vulnerabilities/problems that you find.
+
+---------
 
 # Supported Theme Versions
 
