@@ -1,0 +1,26 @@
+/* Credit: w3y6 */
+
+@property --rainbow {
+  syntax: '<color>';
+  initial-value: #ff000033;
+  inherits: false;
+}
+
+@keyframes rainbow {
+    16.7% { --rainbow: #ffa50033; }
+    33.3% { --rainbow: #ffff0033; }
+    50%   { --rainbow: #00800033; }
+    66.7% { --rainbow: #0000ff33; }
+    73.3% { --rainbow: #ee82ee33; }
+    100%  { --rainbow: #ff000033; }
+}
+
+#app-mount {
+  transform: rotate3d(2, -1, -1, -0.2turn) scale(0.9);
+  box-shadow: 8px 8px 8px var(--rainbow), 
+              16px 16px 16px var(--rainbow), 
+              32px 32px 32px var(--rainbow), 
+              64px 64px 64px var(--rainbow),
+              128px 128px 128px var(--rainbow);
+  animation: rainbow 5s linear infinite;
+}
