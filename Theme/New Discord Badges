@@ -1,0 +1,46 @@
+/* Change Image of Badges */
+
+[class*=profileBadges-] > [aria-label="Active Developer"] > img { /* active dev */
+    content: url(https://cdn.discordapp.com/emojis/816246551470538793.gif?size=128&quality=lossless);
+}
+
+[class*=profileBadges-] > [aria-label*="Server Boosting since"] > img { /* Server booster */
+    content: url(https://cdn.discordapp.com/emojis/982822085346881556.gif?size=128&quality=lossless);
+}
+
+[class*=profileBadges-] > [aria-label*="Subscriber since"] > img { /* Subscriber */
+    content: url(https://cdn.discordapp.com/emojis/807928012455673876.gif?size=128&quality=lossless);
+}
+
+[class*=profileBadges-] > [aria-label*="Originally"] > img { /* Old Discord Tag */
+    content: url(https://cdn.discordapp.com/emojis/789724499040927805.webp?size=128&quality=lossless);
+}
+
+[class*=profileBadges-] > [aria-label*="Brilliance"] > img { /* Brilliance Badge */
+    content: url(https://cdn.discordapp.com/emojis/650603109990793226.webp?size=128&quality=lossless);
+}
+
+[class*=profileBadges-] > [aria-label*="Bravery"] > img { /* Bravery Badge */
+    content: url(https://cdn.discordapp.com/emojis/820790377069019207.webp?size=128&quality=lossless);
+}
+
+[class*=profileBadges-] > [aria-label*="Balance"] > img { /* Balance Badge */
+    content: url(https://cdn.discordapp.com/emojis/768372644613062677.gif?size=128&quality=lossless);
+}
+
+[class*=profileBadges-] > [aria-label*="Events"] > img { /* Events Badge */
+    content: url(https://cdn.discordapp.com/emojis/736308332121292892.gif?size=128&quality=lossless);
+}
+
+[class*=profileBadges-] > [aria-label*="Early"] > img { /* Early Badge */
+    content: url(https://cdn.discordapp.com/emojis/1024751352028602449.webp?size=128&quality=lossless);
+}
+
+[class*=profileBadges-2pItdR] > [aria-label*="Early"], [class*=profileBadges-2pItdR] > [aria-label*="Events"], [class*=profileBadges-2pItdR] > [aria-label*="Balance"]
+, [class*=profileBadges-2pItdR] > [aria-label*="Bravery"], [class*=profileBadges-2pItdR] > [aria-label*="Brilliance"], [class*=profileBadges-2pItdR] > [aria-label*="Originally"], [class*=profileBadges-2pItdR] > [aria-label*="Subscriber"]
+, [class*=profileBadges-2pItdR] > [aria-label*="Server Boosting"], [class*=profileBadges-2pItdR] > [aria-label="Active Developer"] {
+    display: flex;
+    width: 1.58em;
+    justify-content: center;
+}
+/* // */
