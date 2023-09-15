@@ -1,5 +1,6 @@
 /* Single Liners */
 .channelTextArea-1FufC0 .divider-2rZFJK { border-top: none; }
+.channelTextArea-1FufC0 { bottom: -10px }
 .actionBar-1ozugS { transform: translate(0, 0); }
 .slateTextArea-27tjG0 { padding-left: 10px; }
 .form-3gdLxP .innerDisabled-2dbG11.sansAttachButton-1ERHue { padding-left: 16px; }
@@ -140,4 +141,13 @@
 .form-3gdLxP .textArea-2CLwUE.textAreaSlate-9-y-k2.slateContainer-3x9zil {
     grid-row: 1/5;
     grid-column: 1;
+}
+
+.typing-2J1mQU {    
+    background-color: #292B2F;
+    border-radius: 5px;
+    margin: calc(9.5%) 0;
+    padding-left: 5px !important;
+    padding-right: 5px;
+    padding-bottom: 0 !important;
 }
