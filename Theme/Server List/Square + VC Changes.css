@@ -3,9 +3,6 @@
 [class*=listItem-] [class*=wrapper-] > svg >
 foreignObject { mask: none !important; border-radius: 5px; } /* <- DO NOT DELETE */
 
-/* Removes scrollbar in channel scroll */
-.scroller-1ox3I2::-webkit-scrollbar { display: none; }
-
 /* Makes Folder background transparent */
 .folderIconWrapper-1oRIZr { background: transparent !important; }
 
