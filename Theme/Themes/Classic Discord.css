@@ -173,7 +173,6 @@
     background-color: rgba(0, 0, 0, 0.377);
     color: beige;
     border: var(--background-modifier-accent) 1px solid;
-    
 }
 
 /* VC Overlay Icons */
@@ -186,7 +185,7 @@
 .button-1EGGcP[aria-label="You can't stream into this channel."],
 .button-1EGGcP[aria-label="Soundboard disabled when suppressed"]  {
     background-color: #ff0000b0 !important;
-    border-radius: 5px;;
+    border-radius: 5px;
 }
 
 .actionButtons-2vEOUh > div > .buttonColor-3bP3fX  { /* Removes White Haze over soundboard button */
@@ -194,7 +193,7 @@
 }
 
 [class*=live-1V2D-f] { /* Live Button */
-    border-radius: 5px;;
+    border-radius: 5px;
 }
 
 /* Discord Logo > Selected */
