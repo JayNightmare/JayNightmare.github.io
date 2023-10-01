@@ -1,0 +1,15 @@
+[class*=guildNameText] {
+    visibility: hidden;
+    position: relative;
+    width: 5.5rem; /* Change when server name changes */
+    height: 1rem;
+}
+
+[class*=guildNameText-]:after {
+    visibility: visible;
+    content: "Your Mother"; /* Server Name */
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: max-content;
+}
