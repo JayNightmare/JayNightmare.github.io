@@ -29,13 +29,14 @@ Open an issue with any vulnerabilities/problems that you find.
 ## Message Bar.css
 | Version    | Supported          | Available          |
 | -------    | ------------------ | ----------------   |
-| In Github  | :white_check_mark: | :white_check_mark: |
+| In Github  | :x:  - bugs        | :white_check_mark: |
 
 ## Bill Board.css & Plane.css
 | Version    | Supported          | Available          |
 | -------    | ------------------ | ----------------   |
 | In Github  |  :x:  - bugs       | :white_check_mark: |
 > ⚠️ Not being worked on anymore ⚠️
+> Known bugs: Unable to get interact with nav bar
 
 ## Shaking Servers.css
 | Version    | Supported          | Available          |
