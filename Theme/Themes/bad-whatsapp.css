@@ -1,0 +1,153 @@
+[class^=container__][class*=fixClipping__] {
+  background: 0 0;
+  backdrop-filter: blur(2px); /* Insert Blur here*/
+}
+
+[class^=container__][class*=fixClipping__] [class*=content_] { 
+  background: rgb(203,0,184);
+  background: linear-gradient(45deg, rgba(203, 0, 183, 1) 0%, rgba(203,0,183,0.347) 50%, rgba(0, 5, 30, 0.347) 50%, rgba(0, 5, 30, 1) 100%);
+  border-radius: 5px;
+  padding: 45px 30px 10px 30px;
+}
+
+/* Change Discord logo */
+.content_de05de video  { display: none !important; }
+
+/* WHATSAPP - DISAPP */
+
+:root {
+  --wa-primary:   rgb(34, 46, 53);
+  --wa-secondary: rgb(17, 27, 33);
+  --wa-tertiary:  rgb(0, 168, 132);
+  --wa-messagebar:rgb(42, 57, 66);
+
+  --wa-navbar:    rgb(32, 44, 51);
+
+  --wa-danger:    rgb(232, 88, 105);
+
+  /* Change discord defaults */
+  --background-primary: var(--wa-primary);
+  --background-secondary: var(--wa-secondary);
+  --background-tertiary: var(--wa-navbar);
+  --bg-overlay-2: var(--wa-navbar); 
+  --bg-overlay-3: var(--wa-messagebar);
+  --status-positive-background: var(--wa-tertiary);
+
+}
+
+[aria-label*="Private"] > div {
+  background-color: var(--background-secondary) !important;
+}
+
+/* Channels */
+[class^=content] [class^=sidebar] > nav #channels,
+[class^=container] [class^=membersWrap] [aria-label="Members"] [class^=member_],
+.members__573eb
+{ background: var(--wa-secondary) !important; }
+
+/* Top and bottom Nav bars */
+[aria-label="User area"] > div:last-child {
+  background: var(--wa-navbar);
+
+  /* Attempt One */
+  position: absolute;
+  top: 0;
+}
+
+[class*=sidebar] > [class*=container] > div > header, [class*=sidebar] > [class*=container] > div > div  {
+  position: absolute;
+  top: 92vh;
+  background-color: var(--wa-navbar);
+  width: 100%;
+}
+
+/* Moves banner up */
+[class*=sidebar]:has([class*=bannerVisible]) > [class*=container] .animatedContainer__0e828 {
+  top: 95vh;
+}
+[class*=sidebar]:has([class*=bannerVisible]) > [class*=container] {
+  bottom: 115px;
+}
+
+          /* !! NOTE !!  */
+/* ONLY ONE SHOULD BE ACTIVE AT ONCE */
+      /* OTHERWISE IT BREAKS */
+
+/* Banner No Popup */
+.container__7e23c {
+  position: sticky;
+  top: 0;
+}
+
+[aria-label="Channels"] {
+  bottom: 4%;
+  padding-bottom: 15px;
+}
+
+/* Banner Popup */
+/* #popout_3744 > div {
+  position: absolute;
+  top: 38vh;
+}
+
+[class*=sidebar]:has([class*=bannerVisible]) [aria-label="Channels"] {
+  top: 10%;
+}
+
+[aria-label="Channels"] {
+  top: 6%;
+  padding-bottom: 15px;
+} */
+
+/* Drop Down Bar */
+
+.dropdownButton_a246fc { transform: rotate(145deg); }
+
+
+/* Adds Image in the middle of title bar */
+.titleBar__710b0 {
+  background-image: url("https://cdn.discordapp.com/emojis/738707990282240060.gif?size=16&quality=lossless");
+  background-repeat: no-repeat;
+
+  background-position-x: center;
+  background-position-y: center;
+
+  background-color: rgb(24, 32, 36);
+  height: auto;
+}
+
+/* REMOVES DISCORD LOGO */
+.wordmark__5b8c9 path {
+  display: none;
+}
+
+/* Apple Style Nav Bar UI */
+[aria-label="Close"], [aria-label="Maximise"], [aria-label="Minimise"] {
+  margin-right: 10px;
+  margin-top: 10px;
+  width: 13px;
+  height: 13px;
+  border-radius: 9999999px;
+}
+
+[aria-label="Close"] { background-color:  rgb(254, 96, 87); }
+
+[aria-label="Maximise"] {
+  background-color: rgb(38, 200, 64);
+  &:hover { background-color: rgb(28, 148, 47); }
+}
+
+[aria-label="Minimise"] {
+  background-color: rgb(254, 189, 46);
+  &:hover { background-color: rgb(203, 151, 36); }
+}
+
+[aria-label="Close"] svg, [aria-label="Maximise"] svg, [aria-label="Minimise"] svg { display: none; }
+
+/* Search Bar - Closed */
+.search_ac353c:not(.open_d3ab4e) > .searchBar__5a20a { width: 22px; background: transparent; }
+.searchBarComponent__8f95f{ background: transparent; }
+.search_ac353c:not(.open_d3ab4e) .iconLayout__9d9a4 { cursor: pointer; }
+.search_ac353c:not(.open_d3ab4e) .iconContainer__9f124 { transform: scale(1.4); }
+.search_ac353c:not(.open_d3ab4e) .icon__5c8c7 { color: var(--interactive-normal); }
+.search_ac353c:not(.open_d3ab4e):hover .icon__5c8c7 { color: var(--interactive-active); }
