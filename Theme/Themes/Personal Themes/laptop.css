@@ -1,0 +1,94 @@
+[aria-label="Update Ready!"]:hover {
+  path {
+    transition: 350ms;
+    animation: DSUpdateFill 1s infinite linear;
+  }
+}
+
+[aria-label="Update Ready!"] path {
+  fill: black;
+  transition: 350ms;
+}
+
+/* REMOVE GIF WORD BELOW GIF */
+.embedMedia__4e169 > span { display: none; }
+
+/* Forms background */
+.container_b92032, .forumOrHome__8b95a { background: var(--background-primary) !important; }
+
+
+.mainCard__0ec2c {
+  --c: #c6208c; /* the border color */
+  --b: 3px;    /* the border thickness*/
+  --g: 8px;     /* the gap on hover */
+  
+
+  padding: calc(var(--g) + var(--b));
+  --_g: #0000 25%,var(--c) 0;
+  background: 
+    conic-gradient(from 180deg at top var(--b) right var(--b),var(--_g)) var(--_i,200%) 0  /200% var(--_i,var(--b))  no-repeat,
+    conic-gradient(at bottom var(--b) left  var(--b),var(--_g)) 0   var(--_i,200%)/var(--_i,var(--b)) 200%  no-repeat;
+  transition: .3s, background-position .3s .3s;
+  border-radius: 8px;
+}
+
+.mainCard__0ec2c:hover {
+  --_i: 100%;
+  transition: .3s, background-size .3s .3s;
+}
+
+.containerDefault_ae2ea4 > div {
+  --c: #c6208c; /* the border color */
+  --b: 3px;    /* the border thickness*/
+  --g: 0px;     /* the gap on hover */
+  
+  margin: 2px;
+
+  padding: calc(var(--g) + var(--b));
+  --_g: #0000 25%,var(--c) 0;
+  background: 
+    conic-gradient(from 180deg at top var(--b) right var(--b),var(--_g)) var(--_i,200%) 0  /200% var(--_i,var(--b))  no-repeat,
+    conic-gradient(at bottom var(--b) left  var(--b),var(--_g)) 0   var(--_i,200%)/var(--_i,var(--b)) 200%  no-repeat;
+  transition: .3s, background-position .3s .3s;
+  border-radius: 3px;
+}
+
+.link_ddbb36 { border-radius: 0; }
+
+.containerDefault_ae2ea4 > div:hover, .modeUnreadImportant__35358 {
+  --_i: 100%;
+  transition: .3s, background-size .3s .3s;
+}
+
+.modeUnreadImportant__35358 > div:last-child, .modeSelected__473f1 .link_ddbb36 {
+  background: #c6208c3d !important;
+  border: 2px solid ;
+  border-radius: 3px;
+}
+
+[class^=container__][class*=fixClipping__] {
+  background: 0 0;
+  backdrop-filter: blur(2px); /* Insert Blur here*/
+}
+
+[class^=container__][class*=fixClipping__] [class*=content_] { 
+  background: rgb(203,0,184);
+  background: linear-gradient(45deg, rgba(203, 0, 183, 1) 0%, rgba(203,0,146,0.347) 50%, rgba(0, 5, 30, 0.347) 50%, rgba(0, 5, 30, 1) 100%);
+  border-radius: 5px;
+  padding: 45px 30px 10px 30px;
+}
+
+/* Threads For Channels */
+#channels [class^=container_]:not([class*=containerWithMargin])
+ { max-height: 0;
+   overflow: hidden; 
+   transition: max-height 4s ease; }
+   
+#channels [class^=containerDefault_]:hover + [class^=container_],
+#channels [class^=container_]:hover
+ { max-height: 100%; }
+
+/* Change Discord logo */
+.content_de05de > video > image {
+  content: url('https://cdn.discordapp.com/emojis/738707990282240060.gif?size=128&quality=lossless') !important;
+}
