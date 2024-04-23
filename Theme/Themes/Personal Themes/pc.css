@@ -33,6 +33,69 @@
 
     --status-danger: rgb(255, 82, 232) !important;
     --red-400: var(--status-danger); 
+
+    --text-channel-icon:            url("https://cdn.discordapp.com/emojis/1000094452167225364.webp?size=96&quality=lossless");  /* Chat Bubble */
+    --voice-channel-icon:           url("https://cdn.discordapp.com/emojis/912640343030251550.webp?size=96&quality=lossless"); /* Voice Call */
+    --forum-channel-icon:           url("https://cdn.discordapp.com/emojis/1206262229767422053.gif?size=96&quality=lossless"); /* Sad Cat */
+    --announcement-channel-icon:    url("https://cdn.discordapp.com/emojis/1052611391858684015.gif?size=96&quality=lossless"); /* Annou Icon */
+    --stage-channel-icon:           url("https://cdn.discordapp.com/emojis/927623478482436096.webp?size=96&quality=lossless"); /* Sad Cat */
+    --rules-channel-icon:           url("https://cdn.discordapp.com/emojis/813148174431944734.webp?size=128&quality=lossless"); /* Read the rules */
+
+        /* NEON COLORS */
+    --text-channel-neon:            rgb(253, 235, 79);
+    --voice-channel-neon:           rgb(91, 199, 251);
+    --forum-channel-neon:           rgb(233, 51, 147);
+    --announcement-channel-neon:    rgb(236, 50, 83);
+    --stage-channel-neon:           rgb(116, 251, 78);
+    --rules-channel-neon:           rgb(111, 167, 96);
+
+    /* OTHER NEON COLORS */
+    --text-channel-neon-alt:        rgb(242, 201, 209);
+    --voice-channel-neon-alt:       rgb(243, 182, 198);
+    --forum-channel-neon-alt:       rgb(43, 176, 191);
+    --announcement-channel-neon-alt:rgb(41, 89, 29);
+    --stage-channel-neon-alt:       rgb(244, 200, 67);
+    --rules-channel-neon-alt:       rgb(111, 167, 96);
+
+    /* MUTE COLORS */
+    --text-channel-mute:            rgb(149, 93, 63);
+    --voice-channel-mute:           rgb(161, 195, 218);
+    --forum-channel-mute:           rgb(195, 141, 79);
+    --announcement-channel-mute:    rgb(167, 74, 67);
+    --stage-channel-mute:           rgb(157, 164, 212);
+    --rules-channel-mute:           rgb(158, 213, 151);
+
+    /* PASTEL COLORS */
+    --text-channel-pastel:          rgb(205, 180, 219);
+    --voice-channel-pastel:         rgb(255, 200, 221);
+    --forum-channel-pastel:         rgb(255, 175, 204);
+    --announcement-channel-pastel:  rgb(189, 224, 254);
+    --stage-channel-pastel:         rgb(162, 210, 255);
+    --rules-channel-pastel:         rgb(204, 255, 193);
+
+    /* OTHER PASTEL COLORS */
+    --text-channel-pastel-alt:          rgb(235, 157, 162);
+    --voice-channel-pastel-alt:         rgb(240, 184, 132);
+    --forum-channel-pastel-alt:         rgb(232, 230, 165);
+    --announcement-channel-pastel-alt:  rgb(187, 232, 181);
+    --stage-channel-pastel-alt:         rgb(172, 187, 232);
+    --rules-channel-pastel-alt:         rgb(197, 172, 232);
+
+    /* LIGHT COLORS */
+    --text-channel-light:          rgb(161, 154, 209);
+    --voice-channel-light:         rgb(143, 194, 223);
+    --forum-channel-light:         rgb(194, 224, 174);
+    --announcement-channel-light:  rgb(239, 239, 168);
+    --stage-channel-light:         rgb(237, 203, 156);
+    --rules-channel-light:         rgb(217, 156, 165);
+
+    /* OTHER LIGHT COLORS */
+    --text-channel-light-alt:          rgb(237, 83, 21);
+    --voice-channel-light-alt:         rgb(255, 185, 43);
+    --forum-channel-light-alt:         rgb(254, 235, 81);
+    --announcement-channel-light-alt:  rgb(155, 202, 62);
+    --stage-channel-light-alt:         rgb(57, 187, 201);
+    --rules-channel-light-alt:         rgb(103, 109, 203);
 }
 /* ---- */
 
@@ -535,65 +598,6 @@ img { border-radius: 5px !important; }
     border: 1px solid rebeccapurple !important;
 }
 
-/* Changes Channel Colours */
-:root {
-    /* NEON COLORS */
-    --text-channel-neon:            rgb(253, 235, 79);
-    --voice-channel-neon:           rgb(91, 199, 251);
-    --forum-channel-neon:           rgb(233, 51, 147);
-    --announcement-channel-neon:    rgb(236, 50, 83);
-    --stage-channel-neon:           rgb(116, 251, 78);
-    --rules-channel-neon:           rgb(111, 167, 96);
-
-    /* OTHER NEON COLORS */
-    --text-channel-neon-alt:        rgb(242, 201, 209);
-    --voice-channel-neon-alt:       rgb(243, 182, 198);
-    --forum-channel-neon-alt:       rgb(43, 176, 191);
-    --announcement-channel-neon-alt:rgb(41, 89, 29);
-    --stage-channel-neon-alt:       rgb(244, 200, 67);
-    --rules-channel-neon-alt:       rgb(111, 167, 96);
-
-    /* MUTE COLORS */
-    --text-channel-mute:            rgb(149, 93, 63);
-    --voice-channel-mute:           rgb(161, 195, 218);
-    --forum-channel-mute:           rgb(195, 141, 79);
-    --announcement-channel-mute:    rgb(167, 74, 67);
-    --stage-channel-mute:           rgb(157, 164, 212);
-    --rules-channel-mute:           rgb(158, 213, 151);
-
-    /* PASTEL COLORS */
-    --text-channel-pastel:          rgb(205, 180, 219);
-    --voice-channel-pastel:         rgb(255, 200, 221);
-    --forum-channel-pastel:         rgb(255, 175, 204);
-    --announcement-channel-pastel:  rgb(189, 224, 254);
-    --stage-channel-pastel:         rgb(162, 210, 255);
-    --rules-channel-pastel:         rgb(204, 255, 193);
-
-    /* OTHER PASTEL COLORS */
-    --text-channel-pastel-alt:          rgb(235, 157, 162);
-    --voice-channel-pastel-alt:         rgb(240, 184, 132);
-    --forum-channel-pastel-alt:         rgb(232, 230, 165);
-    --announcement-channel-pastel-alt:  rgb(187, 232, 181);
-    --stage-channel-pastel-alt:         rgb(172, 187, 232);
-    --rules-channel-pastel-alt:         rgb(197, 172, 232);
-
-    /* LIGHT COLORS */
-    --text-channel-light:          rgb(161, 154, 209);
-    --voice-channel-light:         rgb(143, 194, 223);
-    --forum-channel-light:         rgb(194, 224, 174);
-    --announcement-channel-light:  rgb(239, 239, 168);
-    --stage-channel-light:         rgb(237, 203, 156);
-    --rules-channel-light:         rgb(217, 156, 165);
-
-    /* OTHER LIGHT COLORS */
-    --text-channel-light-alt:          rgb(237, 83, 21);
-    --voice-channel-light-alt:         rgb(255, 185, 43);
-    --forum-channel-light-alt:         rgb(254, 235, 81);
-    --announcement-channel-light-alt:  rgb(155, 202, 62);
-    --stage-channel-light-alt:         rgb(57, 187, 201);
-    --rules-channel-light-alt:         rgb(103, 109, 203);
-}
-
 /* CHANNEL COLORS */
 [class^=containerDefault] [class^=linkTop_] [aria-label*="Text"]  path          { fill: var(--text-channel-neon-alt); }
 [class^=containerDefault] [class^=linkTop_] [aria-label*="Voice"] path          { fill: var(--voice-channel-light); }
@@ -601,17 +605,6 @@ img { border-radius: 5px !important; }
 [class^=containerDefault] [class^=linkTop_] [aria-label*="Announcement"] path   { fill: var(--announcement-channel-light); }
 [class^=containerDefault] [class^=linkTop_] [aria-label*="Stage"] path          { fill: var(--stage-channel-light); }
 [class^=containerDefault] [class^=linkTop_] [aria-label*="Rules"] path          { fill: var(--rules-channel-light); }
-
-
-/* CHANGE CHANNEL ICON */
-:root {
-    --text-channel-icon:            url("https://cdn.discordapp.com/emojis/1000094452167225364.webp?size=96&quality=lossless");  /* Chat Bubble */
-    --voice-channel-icon:           url("https://cdn.discordapp.com/emojis/912640343030251550.webp?size=96&quality=lossless"); /* Voice Call */
-    --forum-channel-icon:           url("https://cdn.discordapp.com/emojis/1206262229767422053.gif?size=96&quality=lossless"); /* Sad Cat */
-    --announcement-channel-icon:    url("https://cdn.discordapp.com/emojis/1052611391858684015.gif?size=96&quality=lossless"); /* Annou Icon */
-    --stage-channel-icon:           url("https://cdn.discordapp.com/emojis/927623478482436096.webp?size=96&quality=lossless"); /* Sad Cat */
-    --rules-channel-icon:           url("https://cdn.discordapp.com/emojis/813148174431944734.webp?size=128&quality=lossless"); /* Read the rules */
-}
 
 /* CHANGE ICON */
 /* [class^=containerDefault] [class^=linkTop_] [aria-label*="Text"]            { content: var(--text-channel-icon); width: 20px; border-radius: 5px; }
