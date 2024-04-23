@@ -1,3 +1,31 @@
+:root {
+    --background-primary: rgba(0, 0, 0, 1); /* Changes Primary Discord Color */
+    --background-secondary: rgba(0, 0, 0, 1); /* Changes Secondary Discord Color */
+    --background-tertiary: rgba(0, 0, 0, 1); /* Changes Tertiary Discord Color */
+    --bg-overlay-2: rgba(0, 0, 0, 1); /* Changes 2nd Overlay Discord Color (For other overlays, change 2 to 1) */
+    
+     /* Text box border */
+    --tb-bborder: rgb(145, 23, 139); /* Changes Border Color */
+    --tb-bbg: #6027815b; /* Changes Background Color */
+}
+
+/* Deafult button values */
+[aria-label="Upload a file or send invites"], 
+[aria-label="Send a gift"],
+[class*=expression-picker-chat-input-button] > button,
+[aria-label="Select emoji"] { 
+    transition: all 0.3s ease-in-out;
+}
+
+/* buttons on hover */
+[aria-label="Upload a file or send invites"]:hover,
+[aria-label="Send a gift"]:hover,
+[class*=expression-picker-chat-input-button] > button:hover { 
+    transition: all 0.3s ease-in-out;
+    transform: scale(1.2);
+}
+
+/*------*/
 /* Main Message Bar */ 
 form [class^=channelTextArea] [class*=textArea_] { 
     height: 370px !important;
@@ -18,9 +46,9 @@ form [class^=channelTextArea] [class*=textArea_] {
 }
 
 [class^=channelTextArea] [class*=textArea] > div > div > div:first-child {
-    border-left: 2px solid black;
-    border-right: 2px solid black;
-    border-top: 2px solid black;
+    border-left: 2px solid var(--tb-bborder);
+    border-right: 2px solid var(--tb-bborder);
+    border-top: 2px solid var(--tb-bborder);
 
     border-radius: 5px 5px 0 0;
 }
@@ -32,13 +60,13 @@ form [class^=channelTextArea] [class*=textArea] > div > div > div:first-child
 
 /* For border text */
 [class^=channelTextArea] [class*=textArea] > div > div > div {
-    border-left: 2px solid black;
-    border-right: 2px solid black;
+    border-left: 2px solid var(--tb-bborder);
+    border-right: 2px solid var(--tb-bborder);
 }
 
 /* For button border */
 [class^=channelTextArea] [class*=textArea] > div > div > div:last-child {
-    border-bottom: 2px solid black;
+    border-bottom: 2px solid var(--tb-bborder);
     border-radius: 0 0 5px 5px;
 
     padding-bottom: 5px;
@@ -54,7 +82,7 @@ form [class^=channelTextArea] [class*=textArea] > div > div > div:first-child
 [class^=channelTextArea] [class*=textArea] > div > div > div,
 [class^=channelTextArea] [class*=textArea] > div > div > div:last-child {   
     padding-left: 5px; padding-right: 5px;
-    background-color: #6027815b;
+    background-color: var(--tb-bbg);
     font-weight: 500;
 }
 
@@ -64,47 +92,45 @@ form [class^=channelTextArea] [class*=textArea] > div > div > div:first-child
   top: 0 !important;
 }
 
-/* Edit message box */
-[class^=messageListItem]:has([data-is-self="true"]) [class*=channelTextArea] > [class*=scrollableContainer] { 
-    /* height: fit-content !important; */
-}
-
 /* Text Input Bar */
-[class*=fontSize16Padding] { 
-    height: max-content;
-}
+[class*=fontSize16Padding] { height: max-content; }
 
 /* Buttons on message bar */
 form [class^=channelTextArea] [class^=buttons] { 
     flex-direction: column;
     padding-top: 5px;
+    padding-left: 8px !important;
     gap: 5px;
     position: absolute;
     top: 17%;
     align-items: center;
-    z-index: 2;
 }
 
-/*-------*/
-
 /* For Main Group Buttons */
-[class^=buttons]:has([class*=expression-picker-chat-input-button]) { padding-top: 0 !important; margin-left: 19.5px }
+[class^=buttons]:has([class*=expression-picker-chat-input-button]) {
+    border: 2px solid var(--tb-bborder);
+    border-radius: 8px;
+    padding: 10px 8px 10px 10px !important;
+    background-color: var(--tb-bbg);
+    height: max-content;
+}
 
 /* For Attachment Button || Note: moving does not affect other buttons only upload button */
 [class*=attachWrapper] {
-    border: 2px solid black;
+    border: 2px solid var(--tb-bborder);
     border-radius: 8px;
-    margin: 10px;
-    background-color: #6027815b;
+    margin: 10px 0px 0px 0px;
+    background-color: var(--tb-bbg);
+    height: fit-content;
 }
 
 /* Actual Function of Upload button */
-[class*=attachWrapper] > button {
-    padding-bottom: 0 !important;
-    margin-left: 0px;
-}
+[class*=attachWrapper] > button { margin-left: 0px; }
 
 /* Moves buttons to left side */
 [class*=sansAttachButton] {
-    padding-left: 0;
+    padding-left: 0px;
+    width: 103%;
 }
+
+/*-------*/
