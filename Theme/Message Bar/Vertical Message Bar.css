@@ -13,7 +13,7 @@ form [class^=channelTextArea] [class*=textArea_] {
 [class^=channelTextArea] > div {
     background-color: var(--background-primary);
     cursor: text;
-    border-top: 1px solid;
+    border-top: 1px solid var(--status-danger);
     border-radius: 0;
 }
 
