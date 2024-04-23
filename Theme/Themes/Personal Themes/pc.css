@@ -378,8 +378,9 @@ img[src*=a_fed43ab12698df65902ba06727e20c0e], img[src*=a_d3da36040163ee0f9176dfe
 *  Closes DM Button
 *  Bio Status
 */
-[class*=sidebar]:hover::-webkit-scrollbar, div > a > div > [class*=content_], [aria-label="Close DM"],
-[class*=tutorialContainer__6835f], [class*=panelSubtextContainer], [class*=channel]:has([class*=interactive]) [class*=closeButton]
+[aria-label="Close DM"], [class*=tutorialContainer__6835f],
+[class*=panelSubtextContainer],
+[class*=channel]:has([class*=interactive]) [class*=closeButton]
 { display: none !important; }
 
 [class*=sidebar]:has([aria-label="Private channels"]) {
