@@ -1,0 +1,126 @@
+/* Main Message Bar */ 
+form [class^=channelTextArea] [class*=textArea] { 
+    height: max-content !important;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 0;
+}
+
+/* Global Scope For text box */
+[class^=channelTextArea] [class^=placeholder] { margin-top: 7px; text-align: center; }
+
+/* Background of Text Area */
+[class^=channelTextArea] > div {
+    background-color: var(--background-primary);
+    cursor: text;
+    border-top: 2px solid var(--status-danger);
+    border-radius: 0;
+}
+
+[class^=channelTextArea] [class*=textArea] > div > div > div:first-child {
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+    border-top: 2px solid black;
+
+    border-radius: 5px 5px 0 0;
+}
+
+/* For text of first child */
+[class^=channelTextArea] [class*=textArea] > div > div > div:first-child,
+form [class^=channelTextArea] [class*=textArea] > div > div > div:first-child
+{ padding-top: 5px; }
+
+/* For border text */
+[class^=channelTextArea] [class*=textArea] > div > div > div {
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
+
+/* For button border */
+[class^=channelTextArea] [class*=textArea] > div > div > div:last-child {
+    border-bottom: 2px solid black;
+    border-radius: 0 0 5px 5px;
+
+    padding-bottom: 5px;
+}
+
+/* For border bottom if first child present */
+[class^=channelTextArea] [class*=textArea] > div > div > div:is(:first-child):last-child {
+    border-radius: 5px;
+}
+
+/* For message text border */
+[class^=channelTextArea] [class*=textArea] > div > div > div:first-child,
+[class^=channelTextArea] [class*=textArea] > div > div > div,
+[class^=channelTextArea] [class*=textArea] > div > div > div:last-child {   
+    padding-left: 5px; padding-right: 5px;
+    background-color: #6027815b;
+    font-weight: 500;
+}
+
+/* Find out */
+[aria-haspopup="dialog"]:has([class^=contents]) {
+  position: relative !important;
+  top: 0 !important;
+}
+
+/* Text Input Bar */
+[class*=fontSize16Padding] { 
+    height: max-content;
+}
+
+/* Buttons on message bar */
+form [class^=channelTextArea] [class*=buttons] { 
+    padding-top: 5px;
+    gap: 5px;
+
+    margin: 15px 5px;
+
+    align-items: center;
+    z-index: 2;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+
+    border: 2px solid black;
+    border-radius: 8px;
+    background-color: #6027815b;
+    height: max-content;
+}
+
+[class^=channelTextArea] [class*=buttons] {
+    height: max-content;
+
+    margin: 10px 0;
+
+    border: 2px solid black;
+    border-radius: 8px;
+
+    background-color: #6027815b;
+}
+
+/* For Attachment Button || Note: moving does not affect other buttons only upload button */
+[class*=attachWrapper] {
+    border: 2px solid black;
+    border-radius: 8px;
+    margin: 10px;
+    background-color: #6027815b;
+    height: fit-content;
+}
+
+/* Actual Function of Upload button */
+[class*=attachWrapper] > button {
+    padding-left: 10px;
+    padding-right: 10px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    
+    margin-left: 0px;
+}
+
+/* Moves buttons to left side */
+[class*=sansAttachButton] {
+    padding-left: 0;
+}
+
+/*-------*/
