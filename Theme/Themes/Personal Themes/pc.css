@@ -6,6 +6,11 @@
     --background-secondary: rgba(0, 0, 0, 1);
     --background-tertiary: rgba(0, 0, 0, 1);
     --bg-overlay-2: rgba(0, 0, 0, 1);
+
+    /* Text box border */
+    --tb-bborder: rgb(145, 23, 139);
+    --tb-bbg: #6027815b; 
+
     --feastables: url("https://cdn.discordapp.com/emojis/903587393439956993.webp?size=96&quality=lossless");
     --mr-beast: url("https://cdn.discordapp.com/emojis/1153814341909483612.gif?size=96&quality=lossless");
     --mr-beast-gaming: url("https://cdn.discordapp.com/emojis/1156300676159246377.gif?size=96&quality=lossless");
@@ -34,7 +39,7 @@
 /* Deafult button values */
 [aria-label="Upload a file or send invites"], 
 [aria-label="Send a gift"],
-.expression-picker-chat-input-button > button,
+[class*=expression-picker-chat-input-button] > button,
 [aria-label="Select emoji"] { 
     transition: all 0.3s ease-in-out;
 }
@@ -42,107 +47,133 @@
 /* buttons on hover */
 [aria-label="Upload a file or send invites"]:hover,
 [aria-label="Send a gift"]:hover,
-.expression-picker-chat-input-button > button:hover { 
+[class*=expression-picker-chat-input-button] > button:hover { 
     transition: all 0.3s ease-in-out;
     transform: scale(1.2);
 }
 
 /*------*/
-[aria-label="Upload a file or send invites"] { /* Upload Button */
-    position: static;
-    padding-left: 16px;
-    z-index: 5;
-    fill: white !important;
+/* Main Message Bar */ 
+form [class^=channelTextArea] [class*=textArea_] { 
+    height: 370px !important;
+    border-radius: 5px;
+    margin: 5px;
+    padding: 0;
 }
 
-.channelTextArea_c2094b [class*=textArea_] { /* Whole message bar */ 
-    height: 310px !important;
+/* Global Scope For text box */
+[class^=channelTextArea] [class^=placeholder] { margin-top: 7px; text-align: center; }
+
+/* Background of Text Area */
+[class^=channelTextArea] > div {
+    background-color: var(--background-primary);
+    cursor: text;
+    border-top: 1px solid var(--status-danger);
+    border-radius: 0;
 }
 
-[class*=channelTextArea_]::after { /* Background for message bar */
-  content: '';
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background: url(https://steamuserimages-a.akamaihd.net/ugc/271724616138984267/FD78FE7C4AC9EC2941BACBB457D311B908EA9CCD/?imw=5000&imh=5000&ima=fit&impolicy=Letterbox&imcolor=%23000000&letterbox=false) repeat center center;
-  border-radius: 5px;
-  border: 3px solid rgb(255, 255, 255);
-  pointer-events: none; /* This ensures that the GIF doesn't interfere with the textbox usage */
-  opacity: 0.2; /* Adjust the opacity to make the textbox content still visible */
-  filter: blur(4px);
+[class^=channelTextArea] [class*=textArea] > div > div > div:first-child {
+    border-left: 2px solid var(--tb-bborder);
+    border-right: 2px solid var(--tb-bborder);
+    border-top: 2px solid var(--tb-bborder);
+
+    border-radius: 5px 5px 0 0;
 }
 
-[class*=channelTextArea_] > [class*=themedBackground__] {
-  background-color: #ffffff00 !important;
+/* For text of first child */
+[class^=channelTextArea] [class*=textArea] > div > div > div:first-child,
+form [class^=channelTextArea] [class*=textArea] > div > div > div:first-child
+{ padding-top: 5px; }
+
+/* For border text */
+[class^=channelTextArea] [class*=textArea] > div > div > div {
+    border-left: 2px solid var(--tb-bborder);
+    border-right: 2px solid var(--tb-bborder);
 }
 
-[aria-haspopup="dialog"]:has(.contents__322f4) {
+/* For button border */
+[class^=channelTextArea] [class*=textArea] > div > div > div:last-child {
+    border-bottom: 2px solid var(--tb-bborder);
+    border-radius: 0 0 5px 5px;
+
+    padding-bottom: 5px;
+}
+
+/* For border bottom if first child present */
+[class^=channelTextArea] [class*=textArea] > div > div > div:is(:first-child):last-child {
+    border-radius: 5px;
+}
+
+/* For message text border */
+[class^=channelTextArea] [class*=textArea] > div > div > div:first-child,
+[class^=channelTextArea] [class*=textArea] > div > div > div,
+[class^=channelTextArea] [class*=textArea] > div > div > div:last-child {   
+    padding-left: 5px; padding-right: 5px;
+    background-color: var(--tb-bbg);
+    font-weight: 500;
+}
+
+/* Find out */
+[aria-haspopup="dialog"]:has([class^=contents]) {
   position: relative !important;
   top: 0 !important;
 }
 
-[class*=contents_] > div > [class*=channelTextArea_]
-> [class*=scrollableContainer__] { 
-    /* Edit message box */
-    max-height: 500vh;
-    height: 50vh;
-}
+/* Text Input Bar */
+[class*=fontSize16Padding] { height: max-content; }
 
-[class*=fontSize16Padding_] { /* Text Input Bar */
-    height: 14vh;
-}
-
-/* Edit Panel */
-.contents_d3ae0d:has(.editor__66464) > div > div > div { height: 500px !important; }
-.contents_d3ae0d:has(.editor__66464) > div > div > div > div > div:nth-child(2) { position: relative; left: 0px; top: 10px; }
-
-.buttons__7ecff { /* Buttons on message bar */
+/* Buttons on message bar */
+form [class^=channelTextArea] [class^=buttons] { 
     flex-direction: column;
     padding-top: 5px;
+    padding-left: 8px !important;
     gap: 5px;
     position: absolute;
-    top: 13%;
-    left: 7.9px;
+    top: 17%;
     align-items: center;
-    z-index: 2;
 }
 
-[class*=channelTextArea_] > div > div > [class*=buttons_] > .expression-picker-chat-input-button, [aria-label="Send a gift"] {
-    position: relative;
-    right: 6px;
-} 
-
-
-.bodyContainer__61b9e { 
-    position: relative;
-    top: 5px; 
+/* For Main Group Buttons */
+[class^=buttons]:has([class*=expression-picker-chat-input-button]) {
+    border: 2px solid var(--tb-bborder);
+    border-radius: 8px;
+    padding: 10px 8px 10px 10px !important;
+    background-color: var(--tb-bbg);
+    height: max-content;
 }
-.textAreaForPostCreation_fe07b8 { padding-top: 11px !important; padding-bottom: 11px !important; }
-.placeholder_dec8c7 { left: 10px; }
 
-.textAreaSlate__8578d { padding: 10px 0px 10px 10px; }
-.channelTextAreaInner__7201d.scrollableContainer_ff917f.themedBackground__3a4c0.webkit__8d35a { width: 102.5% !important; }
+/* For Attachment Button || Note: moving does not affect other buttons only upload button */
+[class*=attachWrapper] {
+    border: 2px solid var(--tb-bborder);
+    border-radius: 8px;
+    margin: 10px 0px 0px 0px;
+    background-color: var(--tb-bbg);
+    height: fit-content;
+}
+
+/* Actual Function of Upload button */
+[class*=attachWrapper] > button { margin-left: 0px; }
+
+/* Moves buttons to left side */
+[class*=sansAttachButton] {
+    padding-left: 0px;
+    width: 103%;
+}
 
 /*-------*/
-[class*=channelTextArea_] > div > div > [class*=buttons_] > .expression-picker-chat-input-button:hover {
-    /* Hover state of emoji selector */
-    transform: scale(1);
-}
 
 /* CHANGE SERVER ICON */
-[aria-label*="Feastables"] > img, [aria-label="Happy Time Talk Groups, folder "] > .folderIconWrapper__72239 > .closedFolderIconWrapper__7321f > div:nth-child(1) {
+[aria-label="  Feastables"] > img, [aria-label="Happy Time Talk Groups, folder "] > [class*=folderIconWrapper] > [class*=closedFolderIconWrapper] > div:nth-child(1) {
     content: var(--feastables) !important;
     transform: scale(1);
 }
 
-[aria-label="  MrBeast"] > img, [aria-label="Happy Time Talk Groups, folder "] > .folderIconWrapper__72239 > .closedFolderIconWrapper__7321f > div:nth-child(2) {
+[aria-label="  MrBeast"] > img, [aria-label="Happy Time Talk Groups, folder "] > [class*=folderIconWrapper] > [class*=closedFolderIconWrapper] > div:nth-child(2) {
     content: var(--mr-beast) !important;
     transform: scale(0.9);
 }
 
-[aria-label="  MrBeast Gaming"], [aria-label="Happy Time Talk Groups, folder "] > .folderIconWrapper__72239 > .closedFolderIconWrapper__7321f > div:nth-child(3) {
+[aria-label="  MrBeast Gaming"], [aria-label="Happy Time Talk Groups, folder "] > [class*=folderIconWrapper] > [class*=closedFolderIconWrapper] > div:nth-child(3) {
     content: var(--mr-beast-gaming) !important;
     transform: scale(1);
 }
@@ -216,20 +247,10 @@ code {
 
 [aria-label="Members"] [class*=membersGroup] { z-index: 10 !important; }
 
-.container_a48b21 { z-index: 0 !important; }
-
 [class*=listItem-] [class*=wrapper-2PSQCG],
 [class*=listItem-] [class*=wrapper-] > svg > foreignObject {
     mask: none !important;
     border-radius: 5px;
-}
-
-.scroller-1ox3I2::-webkit-scrollbar {
-    display: none;
-}
-
-.folderIconWrapper-1oRIZr {
-    background: transparent !important;
 }
 
 /* /// */
@@ -294,11 +315,11 @@ img[src*=a_fed43ab12698df65902ba06727e20c0e], img[src*=a_d3da36040163ee0f9176dfe
 *  Closes DM Button
 *  Bio Status
 */
-.sidebar_e031be:hover::-webkit-scrollbar, div > a > div > [class*=content_], [aria-label="Close DM"],
-[class*=tutorialContainer__6835f], .panelSubtextContainer_fd5930, .closeButton__8f1fd
+[class*=sidebar]:hover::-webkit-scrollbar, div > a > div > [class*=content_], [aria-label="Close DM"],
+[class*=tutorialContainer__6835f], [class*=panelSubtextContainer], [class*=channel]:has([class*=interactive]) [class*=closeButton]
 { display: none !important; }
 
-.sidebar_e031be:has([aria-label="Private channels"]) {
+[class*=sidebar]:has([aria-label="Private channels"]) {
   max-width: 6.1vw;
   border-right: 2px solid rgba(255, 255, 255, 0.096);
   border-left: 2px solid rgba(255, 255, 255, 0.096);
@@ -311,19 +332,17 @@ img[src*=a_fed43ab12698df65902ba06727e20c0e], img[src*=a_d3da36040163ee0f9176dfe
     left: 0;
 }
 
-.withTagAsButton_e22174 {
+[class*=withTagAsButton] {
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
-.sidebar_e031be:has([aria-label="Private channels"]) [aria-label="User area"] .noWrap__5c413 {
+[class*=sidebar]:has([aria-label="Private channels"]) [aria-label="User area"] [class*=noWrap] {
     flex-wrap: wrap;
 }
 
-.justifyStart__6f82d { justify-content: space-around; }
-
-.container_debb33 {
+[aria-label="User area"] [class*=container]:has([aria-label="Set Status"]) {
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -333,17 +352,17 @@ img[src*=a_fed43ab12698df65902ba06727e20c0e], img[src*=a_d3da36040163ee0f9176dfe
     background-color: rgba(0, 0, 0, 1) !important;
 }
 
-.avatarWrapper_ba5175 { margin-right: 0; }
-.withTagAsButton_e22174 { margin-left: 0; padding-left: 6px; padding-top: 10px; }
-.withTagAsButton_e22174 .nameTag__0e320, .nameTag__0e320 { padding-left: 0px; }
+[class*=avatarWrapper] { margin-right: 0; }
+[class*=withTagAsButton] { margin-left: 0; padding-left: 6px; padding-top: 10px; }
+[class*=withTagAsButton] [class*=nameTag], [class*=nameTag] { padding-left: 0px; }
 
-.sidebar_e031be:has([aria-label*="(server)"]) > [aria-label="User area"] > div:nth-child(2) {
+[class*=sidebar]:has([aria-label*="(server)"]) > [aria-label="User area"] > div:nth-child(2) {
   border: 1px solid #636b7583;
   border-radius: 5px;
   flex-direction: row;
 }
 
-.sidebar_e031be:has([aria-label="Private channels"]) [aria-label="User area"] > div:nth-child(2), .sidebar_e031be:has([aria-label*="(server)"]) [aria-label="User area"] > div:nth-child(2) {
+[class*=sidebar]:has([aria-label="Private channels"]) [aria-label="User area"] > div:nth-child(2), [class*=sidebar]:has([aria-label*="(server)"]) [aria-label="User area"] > div:nth-child(2) {
   border-top: 3px solid #23d5ab;
   animation: background-gradient 10s ease-in-out infinite !important;
   padding-top: 0;
@@ -352,7 +371,7 @@ img[src*=a_fed43ab12698df65902ba06727e20c0e], img[src*=a_d3da36040163ee0f9176dfe
 
 
 img { border-radius: 5px !important; }
-.activity__3cbac img { border-radius: 2px !important; }
+[class*=activity] img { border-radius: 2px !important; }
 
 /* Gap between emojis */
 [aria-label="User Badges"] { gap: 5px }
@@ -388,13 +407,13 @@ img { border-radius: 5px !important; }
 [aria-label="User Badges"] [aria-label*="Server Boosting"] > img { content: var(--nitro-booster); }
 
 /* Private Messaging Scope */
-[aria-label*="(channel)"] > div:nth-child(2):has(.blockedSystemMessage_d1b25e):has([aria-label="Messages in "]) {
+[aria-label*="(channel)"] > div:nth-child(2):has([class*=blockedSystemMessage]):has([aria-label="Messages in "]) {
     background-color: rgba(194, 0, 0, 0.226);
 }
 
 /* Server Scope */
-.groupStart__7b93c:has(.blockedSystemMessage_d1b25e) { background-color: rgba(194, 0, 0, 0.226);}
-.groupStart__7b93c:is(.expanded_d275c4) {
+[class*=groupStart]:has([class*=blockedSystemMessage]) { background-color: rgba(194, 0, 0, 0.226);}
+[class*=groupStart]:is([class*=expanded]) {
     background-color: rgba(128, 0, 0, 0.37) !important;
     padding-bottom: 10px;
 }
@@ -402,7 +421,7 @@ img { border-radius: 5px !important; }
 /* Removes GIF from gifs */
 [class*=imageContent__] > span { display: none; }
 
-.newMessagesBar__8b272, .lookFilled__950dd.colorBrand__27d57 { background-color: #e73c7e; }
+[class*=newMessagesBar], [class*=lookFilled][class*=colorBrand] { background-color: #e73c7e; }
 
 /* ANIMATIONS */
 @keyframes background-gradient {
@@ -425,10 +444,7 @@ img { border-radius: 5px !important; }
   100%  { border-color: #ee7752; }
 }
 
-/* Channels list */
-.container__7e23c { border-bottom: 10px solid rgba(255, 255, 255, 0); }
-
-[aria-label="Channels"] > li:is(.containerDefault_ae2ea4):last-child {
+[aria-label="Channels"] > li:is([class*=containerDefault]):last-child {
     border-bottom: 1px solid red !important;
     padding-bottom: 4px;
 }
@@ -490,31 +506,31 @@ img { border-radius: 5px !important; }
   transition: 350ms;
 }
 
-.focusLock__28507 .buttons__7ecff {
+[class*=focusLock] .buttons__7ecff {
     position: absolute;
     top: 4px !important;
     left: 92%
 }
 
-.focusLock__28507 .textArea_a86690 > div > div {
+[class*=focusLock] [class*=textArea] > div > div {
     padding: 0;
 }
 
-.vc-rdb-input .textArea_a86690 > div:first-child {
+.vc-rdb-input [class*=textArea] > div:first-child {
     float: right;
     width: 90%;
 }
 
-.vc-rdb-input .textArea_a86690 > div:first-child > * {
+.vc-rdb-input [class*=textArea] > div:first-child > * {
     padding-top: 3px;
 }
 
-.vc-rdb-input .textArea_a86690 > div:first-child > div:first-child {
+.vc-rdb-input [class*=textArea] > div:first-child > div:first-child {
     float: right;
 }
 
 /*---Lock Icon Recolor---*/
-.icon__67ab4:has(path[d^="M16 4h.5v"]) path[d^="M16 4h.5v"] {
+[class*=icon]:has(path[d^="M16 4h.5v"]) path[d^="M16 4h.5v"] {
     fill: #ff5050 !important;
     border: 1px solid rebeccapurple !important;
 }
@@ -609,28 +625,28 @@ img { border-radius: 5px !important; }
 /* Change Content within "New" message divider */
 #---new-messages-bar {  }
 
-.channelInfo_b0882c { display: none; }
+[class*=channelInfo] { display: none; }
 
-#my-account-tab > div > div:first-child, .userSettingsSecurity__6051f:has(.sectionTitle__3e02b), .marginTop40_bda863:has(.contents__322f4) {
+#my-account-tab > div > div:first-child, [class*=userSettingsSecurity]:has([class*=sectionTitle]), [class*=marginTop40]:has([class*=contents]) {
     border: 2px solid rgb(71, 71, 71);
     border-radius: 10px;
     background-color: var(--background-primary);
     padding: 10px;
 }
 
-.marginTop40_bda863 > div :has(.noWrap__5c413) { 
+[class*=marginTop40] > div :has([class*=noWrap]) { 
     border: 0;
     padding: 0;
 }
 
 
-.sidebarRegion__36437 > div {
+[class*=sidebarRegion] > div {
     border: 2px solid rgb(71, 71, 71);
     margin: 10px;
     border-radius: 10px;
 }
 
-[class^=standardSidebarView] > div[class^=sidebarRegion] { background-color: #141414; }
-[class^=layer] div[class^=contentRegion] > div > div { background-color: #141414 !important; }
-.userSettingsSecurity__6051f { padding: 20px; }
-.sectionTitle__3e02b:has([id=":r6r:"]) > h2 { color: white; }
+[class*=standardSidebarView] > div[class*=sidebarRegion] { background-color: #141414; }
+[class*=layer] div[class*=contentRegion] > div > div { background-color: #141414 !important; }
+[class*=userSettingsSecurity] { padding: 20px; }
+[class*=sectionTitle]:has([id=":r6r:"]) > h2 { color: white; }
