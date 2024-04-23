@@ -1,10 +1,6 @@
-/*
-* INSPIRED BY CODEPEN BORDER EFFECT ON IMAGE
-*/
-
-[aria-label="Channels"] [class*=containerDefault] > div {
+[aria-label="Channels"] [class*=containerDefault]:has([class*=link]) > div {
   --c: #c6208c; /* the border color */
-  --b: 3px;     /* the border thickness*/
+  --b: 3px;    /* the border thickness*/
   --g: 0px;     /* the gap on hover */
   
   margin: 2px;
@@ -18,18 +14,15 @@
   border-radius: 3px;
 }
 
-[aria-label="Channels"] [class*=containerDefault] [class*=link] { border-radius: 0; }
 
-[aria-label="Channels"] [class*=containerDefault]:has([class*=link]) > div:hover, [class*=modeUnreadImportant] {
+[aria-label="Channels"] [class*=containerDefault]:has([class*=link]) > div:hover, [class*=modeUnreadImportant]
+{
   --_i: 100%;
   transition: .3s, background-size .3s .3s;
 }
 
-[class*=modeUnreadImportant] > div:last-child, [class*=modeSelected] > div > [class*=link] {
-  background: #c6208c3d !important;
-  border: 2px solid;
-}
-
-[aria-label="Channels"] [class*=containerDefault]:has([class*=link]) [class*=wrapper] {
-    margin-left: 0;
-}
+[aria-label="Channels"] [class*=containerDefault] [class*=link] { border-radius: 0; }
+[class*=modeUnreadImportant] > div:last-child, [class*=modeSelected] > div > [class*=link] { background: #c6208c3d !important; }
+[class*=modeSelected] { border: 3px solid rgb(0, 153, 255); }
+[aria-label="Channels"] [class*=containerDefault]:has([class*=modeSelected]) > div { --c: 0 !important; }
+[aria-label="Channels"] [class*=containerDefault]:has([class*=link]) [class*=wrapper] { margin-left: 0; }
