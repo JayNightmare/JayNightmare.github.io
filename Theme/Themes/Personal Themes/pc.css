@@ -223,6 +223,24 @@ form [class^=channelTextArea] [class^=buttons] {
     width: 103%;
 }
 
+main[aria-label=" (channel)"] [class*=sansAttachButton] [class*=textArea] {
+    display: flex;
+    justify-content: center;
+}
+
+main[aria-label=" (channel)"] [class*=sansAttachButton] [class*=placeholder] {
+    top: 30px;
+}
+
+main[aria-label=" (channel)"] [class*=sansAttachButton] [class*=slateTextArea] {
+    padding-right: 0;
+    right: 0;
+}
+
+main[aria-label=" (channel)"] [class*=sansAttachButton] {
+    width: 100%;
+}
+
 /*-------*/
 
 /* CHANGE SERVER ICON */
