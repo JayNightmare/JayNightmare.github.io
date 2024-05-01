@@ -662,3 +662,27 @@ img { border-radius: 5px !important; }
 [class*=layer] div[class*=contentRegion] > div > div { background-color: #141414 !important; }
 [class*=userSettingsSecurity] { padding: 20px; }
 [class*=sectionTitle]:has([id=":r6r:"]) > h2 { color: white; }
+
+/*discord loading page*/
+.container__827e6.fixClipping__84826{
+    background: 0 0;
+    backdrop-filter: blur(10px);
+}
+.content_de05de { display: none; }
+
+/* Shows mention on channel */
+[class*=channelInfo] { display: block; }
+
+/* Shows hover on messages */
+[aria-label*="Messages in "] [class*=messageListItem] {
+  transition: 300ms ease-in;
+  border-radius: 5px;
+  margin-top: 5px;
+
+  &:hover {
+    background-color: rgba(203,0,184,0.25);
+    border-radius: 5px;
+    margin-top: 5px;
+    transition: 250ms ease-out;
+  }
+}
