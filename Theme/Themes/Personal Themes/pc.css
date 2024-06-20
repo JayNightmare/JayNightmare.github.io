@@ -267,7 +267,6 @@ main[aria-label=" (channel)"] [class*=sansAttachButton] {
 /* Resizes the panel to fit 90% of the screen - 1080 x 1920 */
 [aria-label="Expression Picker"] > [class*=drawerSizingWrapper_] {
     height: 70vh; 
-    width: 29vh !important;
 }
 
 code { 
@@ -685,4 +684,29 @@ img { border-radius: 5px !important; }
     margin-top: 5px;
     transition: 250ms ease-out;
   }
+}
+
+/* Update To Code */
+[aria-label*="Invite"] {
+    display: none !important;
+}
+
+/* message box */
+.vc-rdb-input [class*=textArea] > div:first-child > div:first-child { float: none; }
+.vc-rdb-input [class*=textArea] > div:first-child { float: none; }
+[aria-label*="Message #"] > div { text-align: center; }
+
+
+/* User Profile enlarge */
+[aria-label="User Profile Modal"] [class*=small] {
+    max-height: none !important;
+}
+
+[class*=notAppAsidePanel] > [class*=layerContainer] > [class*=layer]
+> [aria-label="User Profile Modal"] > div > div > div > div {
+    height: fit-content !important;
+}
+
+[class*=expressionPickerPositionLayer] {
+    top: 20px;
 }
