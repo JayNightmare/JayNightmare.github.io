@@ -439,13 +439,11 @@ img[src*=a_fed43ab12698df65902ba06727e20c0e], img[src*=a_d3da36040163ee0f9176dfe
 [class*=sidebar]:has([aria-label*="(server)"]) > [aria-label="User area"] > div:nth-child(2) {
   border: 1px solid #636b7583;
   border-radius: 5px !important;
-  flex-direction: row !important;
 }
 
 [class*=sidebar]:has([aria-label="Private channels"]) [aria-label="User area"] > div:nth-child(2), [class*=sidebar]:has([aria-label*="(server)"]) [aria-label="User area"] > div:nth-child(2) {
   border-top: 3px solid #23d5ab;
   animation: background-gradient 10s ease-in-out infinite !important;
-  padding-top: 0 !important;
 }
 /* //// */
 
