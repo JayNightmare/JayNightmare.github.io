@@ -119,9 +119,9 @@
 /* Main Message Bar */ 
 form [class^=channelTextArea] [class*=textArea_] { 
     height: 370px !important;
-    border-radius: 5px;
-    margin: 5px;
-    padding: 0;
+    border-radius: 5px !important;
+    margin: 5px !important;
+    padding: 0 !important;
 }
 
 /* Global Scope For text box */
@@ -132,7 +132,7 @@ form [class^=channelTextArea] [class*=textArea_] {
     background-color: var(--background-primary);
     cursor: text;
     border-top: 1px solid var(--status-danger);
-    border-radius: 0;
+    border-radius: 0 !important;
 }
 
 [class^=channelTextArea] [class*=textArea] > div > div > div:first-child {
@@ -140,13 +140,13 @@ form [class^=channelTextArea] [class*=textArea_] {
     border-right: 2px solid var(--tb-bborder);
     border-top: 2px solid var(--tb-bborder);
 
-    border-radius: 5px 5px 0 0;
+    border-radius: 5px 5px 0 0 !important;
 }
 
 /* For text of first child */
 [class^=channelTextArea] [class*=textArea] > div > div > div:first-child,
 form [class^=channelTextArea] [class*=textArea] > div > div > div:first-child
-{ padding-top: 5px; }
+{ padding-top: 5px !important; }
 
 /* For border text */
 [class^=channelTextArea] [class*=textArea] > div > div > div {
@@ -157,21 +157,21 @@ form [class^=channelTextArea] [class*=textArea] > div > div > div:first-child
 /* For button border */
 [class^=channelTextArea] [class*=textArea] > div > div > div:last-child {
     border-bottom: 2px solid var(--tb-bborder);
-    border-radius: 0 0 5px 5px;
+    border-radius: 0 0 5px 5px !important;
 
-    padding-bottom: 5px;
+    padding-bottom: 5px !important;
 }
 
 /* For border bottom if first child present */
 [class^=channelTextArea] [class*=textArea] > div > div > div:is(:first-child):last-child {
-    border-radius: 5px;
+    border-radius: 5px !important;
 }
 
 /* For message text border */
 [class^=channelTextArea] [class*=textArea] > div > div > div:first-child,
 [class^=channelTextArea] [class*=textArea] > div > div > div,
 [class^=channelTextArea] [class*=textArea] > div > div > div:last-child {   
-    padding-left: 5px; padding-right: 5px;
+    padding-left: 5px !important; padding-right: 5px !important;
     background-color: var(--tb-bbg);
     font-weight: 500;
 }
@@ -188,57 +188,57 @@ form [class^=channelTextArea] [class*=textArea] > div > div > div:first-child
 /* Buttons on message bar */
 form [class^=channelTextArea] [class^=buttons] { 
     flex-direction: column;
-    padding-top: 5px;
+    padding-top: 5px !important;
     padding-left: 8px !important;
-    gap: 5px;
-    position: absolute;
-    top: 17%;
-    align-items: center;
+    gap: 5px !important;
+    position: absolute !important;
+    top: 17% !important;
+    align-items: cente !importantr;
 }
 
 /* For Main Group Buttons */
 [class^=buttons]:has([class*=expression-picker-chat-input-button]) {
     border: 2px solid var(--tb-bborder);
-    border-radius: 8px;
+    border-radius: 8px !important;
     padding: 10px 8px 10px 10px !important;
     background-color: var(--tb-bbg);
-    height: max-content;
+    height: max-content !important;
 }
 
 /* For Attachment Button || Note: moving does not affect other buttons only upload button */
 [class*=attachWrapper] {
     border: 2px solid var(--tb-bborder);
-    border-radius: 8px;
-    margin: 10px 0px 0px 0px;
+    border-radius: 8px !important;
+    margin: 10px 0px 0px 0px !important;
     background-color: var(--tb-bbg);
-    height: fit-content;
+    height: fit-content !important;
 }
 
 /* Actual Function of Upload button */
-[class*=attachWrapper] > button { margin-left: 0px; }
+[class*=attachWrapper] > button { margin-left: 0px !important; }
 
 /* Moves buttons to left side */
 [class*=sansAttachButton] {
-    padding-left: 0px;
-    width: 103%;
+    padding-left: 0px !important;
+    width: 103% !important;
 }
 
 main[aria-label=" (channel)"] [class*=sansAttachButton] [class*=textArea] {
-    display: flex;
-    justify-content: center;
+    display: flex !important;
+    justify-content: center !important;
 }
 
 main[aria-label=" (channel)"] [class*=sansAttachButton] [class*=placeholder] {
-    top: 30px;
+    top: 30px !important;
 }
 
 main[aria-label=" (channel)"] [class*=sansAttachButton] [class*=slateTextArea] {
-    padding-right: 0;
-    right: 0;
+    padding-right: 0 !important;
+    right: 0 !important;
 }
 
 main[aria-label=" (channel)"] [class*=sansAttachButton] {
-    width: 100%;
+    width: 100% !important;
 }
 
 /*-------*/
@@ -266,7 +266,7 @@ main[aria-label=" (channel)"] [class*=sansAttachButton] {
 
 /* Resizes the panel to fit 90% of the screen - 1080 x 1920 */
 [aria-label="Expression Picker"] > [class*=drawerSizingWrapper_] {
-    height: 70vh; 
+    height: 70vh !important; 
 }
 
 code { 
@@ -320,8 +320,8 @@ code {
 
 [aria-label="Members"] [class*=membersGroup] > span {
     background-color: #2e2e2ea0;
-    border-radius: 5px 5px 0px 0px;
-    padding: 5px 6px 0px 6px;
+    border-radius: 5px 5px 0px 0px !important;
+    padding: 5px 6px 0px 6px !important;
     z-index: 1;
 }
 
@@ -330,7 +330,7 @@ code {
 [class*=listItem-] [class*=wrapper-2PSQCG],
 [class*=listItem-] [class*=wrapper-] > svg > foreignObject {
     mask: none !important;
-    border-radius: 5px;
+    border-radius: 5px !important;
 }
 
 /* /// */
@@ -339,34 +339,34 @@ code {
 :is([class*=profileColors]:has([class*=avatarDecoration]):not(:has(img[src*=a_10b9f886b513b77ccdd67c8784f1a496], img[src*=a_fed43ab12698df65902ba06727e20c0e],
 img[src*=a_d3da36040163ee0f9176dfe7ced45cdc])) :is([class*=nickname], [class*=container] [class*=text-lg-semibold]), [class*=contents]:has([class*=avatarDecoration]):not(:has(img[src*=a_10b9f886b513b77ccdd67c8784f1a496],
 img[src*=a_fed43ab12698df65902ba06727e20c0e], img[src*=a_d3da36040163ee0f9176dfe7ced45cdc])) [class*=username_]) {
-    display: inline-flex;
-    align-items: center;
+    display: inline-flex !important;
+    align-items: center !important;
 }
 
 :is([class*=profileColors]:has([class*=avatarDecoration]):not(:has(img[src*=a_10b9f886b513b77ccdd67c8784f1a496], img[src*=a_fed43ab12698df65902ba06727e20c0e],
 img[src*=a_d3da36040163ee0f9176dfe7ced45cdc])) :is([class*=nickname], [class*=container] [class*=text-lg-semibold]), [class*=contents]:has([class*=avatarDecoration]):not(:has(img[src*=a_10b9f886b513b77ccdd67c8784f1a496],
 img[src*=a_fed43ab12698df65902ba06727e20c0e], img[src*=a_d3da36040163ee0f9176dfe7ced45cdc])) [class*=username_])::after {
-    content: "";
-    display: inline-flex;
-    width: 1em;
-    height: 1em;
-    margin-left: 4px;
+    content: "" !important;
+    display: inline-flex !important;
+    width: 1em !important;
+    height: 1em !important;
+    margin-left: 4px !important;
     background: url("https://cdn.discordapp.com/emojis/802179444643070003.gif?size=128&quality=lossless") left/cover;
 }
 
 /* Tick = Nitro User */
 :is([class*=contents]:has([class*=avatar_]):not(:has(img[src*="webp"])) [class*=username_]),
 :is([class*=profileColors]:has([class*=container__]):not(:has(a[href="https://discord.com/settings/premium"])) :is([class*=nickname], [class*=container] [class*=text-lg-semibold])) { 
-    display: inline-flex;
-    align-items: center;
+    display: inline-flex !important;
+    align-items: center !important;
 }
 
 :is([class*=contents]:has([class*=avatar_]):not(:has(img[src*="webp"])) [class*=username_])::after { 
-    content: "";
-    display: inline-flex;
-    width: 1em;
-    height: 1em;
-    margin-left: 5px;
+    content: "" !important;
+    display: inline-flex !important;
+    width: 1em !important;
+    height: 1em !important;
+    margin-left: 5px !important;
      
     background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="1.604 1.604 18.79 18.79"><path d="M20.396 11c-.018-.646-.215-1.275-.57-1.816-.354-.54-.852-.972-1.438-1.246.223-.607.27-1.264.14-1.897-.131-.634-.437-1.218-.882-1.687-.47-.445-1.053-.75-1.687-.882-.633-.13-1.29-.083-1.897.14-.273-.587-.704-1.086-1.245-1.44S11.647 1.62 11 1.604c-.646.017-1.273.213-1.813.568s-.969.854-1.24 1.44c-.608-.223-1.267-.272-1.902-.14-.635.13-1.22.436-1.69.882-.445.47-.749 1.055-.878 1.688-.13.633-.08 1.29.144 1.896-.587.274-1.087.705-1.443 1.245-.356.54-.555 1.17-.574 1.817.02.647.218 1.276.574 1.817.356.54.856.972 1.443 1.245-.224.606-.274 1.263-.144 1.896.13.634.433 1.218.877 1.688.47.443 1.054.747 1.687.878.633.132 1.29.084 1.897-.136.274.586.705 1.084 1.246 1.439.54.354 1.17.551 1.816.569.647-.016 1.276-.213 1.817-.567s.972-.854 1.245-1.44c.604.239 1.266.296 1.903.164.636-.132 1.22-.447 1.68-.907.46-.46.776-1.044.908-1.681s.075-1.299-.165-1.903c.586-.274 1.084-.705 1.439-1.246.354-.54.551-1.17.569-1.816zM9.662 14.85l-3.429-3.428 1.293-1.302 2.072 2.072 4.4-4.794 1.347 1.246z" fill="rgb(29, 155, 240)"/></svg>') left/cover !important;
 }
@@ -374,11 +374,11 @@ img[src*=a_fed43ab12698df65902ba06727e20c0e], img[src*=a_d3da36040163ee0f9176dfe
 /* Tick = Profile Card */
 :is([class*=profileColors]:has([class*=avatarDecoration]):not(:has(a[href="https://discord.com/settings/premium"])) :is([class*=nickname],
 [class*=container] [class*=text-lg-semibold]))::after {
-    content: "";
-    display: inline-flex;
-    width: 1em;
-    height: 1em;
-    margin-left: 5px;
+    content: "" !important;
+    display: inline-flex !important;
+    width: 1em !important;
+    height: 1em !important;
+    margin-left: 5px !important;
      
     background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" viewBox="1.604 1.604 18.79 18.79"><path d="M20.396 11c-.018-.646-.215-1.275-.57-1.816-.354-.54-.852-.972-1.438-1.246.223-.607.27-1.264.14-1.897-.131-.634-.437-1.218-.882-1.687-.47-.445-1.053-.75-1.687-.882-.633-.13-1.29-.083-1.897.14-.273-.587-.704-1.086-1.245-1.44S11.647 1.62 11 1.604c-.646.017-1.273.213-1.813.568s-.969.854-1.24 1.44c-.608-.223-1.267-.272-1.902-.14-.635.13-1.22.436-1.69.882-.445.47-.749 1.055-.878 1.688-.13.633-.08 1.29.144 1.896-.587.274-1.087.705-1.443 1.245-.356.54-.555 1.17-.574 1.817.02.647.218 1.276.574 1.817.356.54.856.972 1.443 1.245-.224.606-.274 1.263-.144 1.896.13.634.433 1.218.877 1.688.47.443 1.054.747 1.687.878.633.132 1.29.084 1.897-.136.274.586.705 1.084 1.246 1.439.54.354 1.17.551 1.816.569.647-.016 1.276-.213 1.817-.567s.972-.854 1.245-1.44c.604.239 1.266.296 1.903.164.636-.132 1.22-.447 1.68-.907.46-.46.776-1.044.908-1.681s.075-1.299-.165-1.903c.586-.274 1.084-.705 1.439-1.246.354-.54.551-1.17.569-1.816zM9.662 14.85l-3.429-3.428 1.293-1.302 2.072 2.072 4.4-4.794 1.347 1.246z" fill="rgb(29, 155, 240)"/></svg>') left/cover !important;
 }
@@ -387,7 +387,7 @@ img[src*=a_fed43ab12698df65902ba06727e20c0e], img[src*=a_d3da36040163ee0f9176dfe
 [class*=listItem] [class*=wrapper],
 [class*=listItem] [class*=wrapper] > svg > foreignObject {
     mask: none !important;
-    border-radius: 5px;
+    border-radius: 5px !important;
 }
 
 /* 
@@ -401,52 +401,51 @@ img[src*=a_fed43ab12698df65902ba06727e20c0e], img[src*=a_d3da36040163ee0f9176dfe
 { display: none !important; }
 
 [class*=sidebar]:has([aria-label="Private channels"]) {
-  max-width: 6.1vw;
+  max-width: 6.1vw !important;
   border-right: 2px solid rgba(255, 255, 255, 0.096);
   border-left: 2px solid rgba(255, 255, 255, 0.096);
 }
 
 /* User Area */
 [aria-label="User area"] {
-    position: relative;
-    top: -10px;
-    left: 0;
+    position: relative !important;
+    top: -10px !important;
+    left: 0 !important;
 }
 
 [class*=withTagAsButton] {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    display: flex !important;
+    flex-direction: column !important;
+    align-items: center !important;
 }
 
 [class*=sidebar]:has([aria-label="Private channels"]) [aria-label="User area"] [class*=noWrap] {
-    flex-wrap: wrap;
+    flex-wrap: wrap !important;
 }
 
 [aria-label="User area"] [class*=container]:has([aria-label="Set Status"]) {
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    height: fit-content;
-    padding: 0px 0px;
-    padding-top: 15px;
+    display: flex !important;
+    align-items: center !important;
+    flex-direction: column !important;
+    height: fit-content !important;
+    padding: 15px 0 10px 0 !important;
     background-color: rgba(0, 0, 0, 1) !important;
 }
 
-[class*=avatarWrapper] { margin-right: 0; }
-[class*=withTagAsButton] { margin-left: 0; padding-left: 6px; padding-top: 10px; }
-[class*=withTagAsButton] [class*=nameTag], [class*=nameTag] { padding-left: 0px; }
+[class*=avatarWrapper] { margin-right: 0 !important; flex-direction: column !important; }
+[class*=withTagAsButton] { margin-left: 0; padding-left: 6px !important; padding-top: 10px !important; }
+[class*=withTagAsButton] [class*=nameTag], [class*=nameTag] { padding-left: 2px !important; }
 
 [class*=sidebar]:has([aria-label*="(server)"]) > [aria-label="User area"] > div:nth-child(2) {
   border: 1px solid #636b7583;
-  border-radius: 5px;
-  flex-direction: row;
+  border-radius: 5px !important;
+  flex-direction: row !important;
 }
 
 [class*=sidebar]:has([aria-label="Private channels"]) [aria-label="User area"] > div:nth-child(2), [class*=sidebar]:has([aria-label*="(server)"]) [aria-label="User area"] > div:nth-child(2) {
   border-top: 3px solid #23d5ab;
   animation: background-gradient 10s ease-in-out infinite !important;
-  padding-top: 0;
+  padding-top: 0 !important;
 }
 /* //// */
 
@@ -455,10 +454,10 @@ img { border-radius: 5px !important; }
 [class*=activity] img { border-radius: 2px !important; }
 
 /* Gap between emojis */
-[aria-label="User Badges"] { gap: 5px }
-[aria-label="User Badges"] > :nth-child(1) { padding-left: 2px; }
-[aria-label="User Badges"] > :nth-child(1):is([aria-label*="#"]) { padding-left: 0; }
-[aria-label="User Badges"] > :nth-child(1):is([aria-label*="Supports"]) { padding-left: 0; }
+[aria-label="User Badges"] { gap: 5px !important; }
+[aria-label="User Badges"] > :nth-child(1) { padding-left: 2px !important; }
+[aria-label="User Badges"] > :nth-child(1):is([aria-label*="#"]) { padding-left: 0 !important; }
+[aria-label="User Badges"] > :nth-child(1):is([aria-label*="Supports"]) { padding-left: 0 !important; }
 
 /* OG Known as */
 [aria-label="User Badges"] [aria-label*="#"] > img { content: var(--og-known); }
@@ -496,11 +495,11 @@ img { border-radius: 5px !important; }
 [class*=groupStart]:has([class*=blockedSystemMessage]) { background-color: rgba(194, 0, 0, 0.226);}
 [class*=groupStart]:is([class*=expanded]) {
     background-color: rgba(128, 0, 0, 0.37) !important;
-    padding-bottom: 10px;
+    padding-bottom: 10px !important;
 }
 
 /* Removes GIF from gifs */
-[class*=imageContent__] > span { display: none; }
+[class*=imageContent__] > span { display: none !important; }
 
 [class*=newMessagesBar], [class*=lookFilled][class*=colorBrand] { background-color: #e73c7e; }
 
@@ -568,10 +567,10 @@ img { border-radius: 5px !important; }
   
   box-shadow: 0 0 15px rgba(255, 14, 159, 0.705) !important;
   
-  border-radius: 5px;
+  border-radius: 5px !important;
 
-  padding-left: 3px;
-  padding-right: 3px;
+  padding-left: 3px !important;
+  padding-right: 3px !important;
   
 }
 
@@ -590,24 +589,24 @@ img { border-radius: 5px !important; }
 [class*=focusLock] .buttons__7ecff {
     position: absolute;
     top: 4px !important;
-    left: 92%
+    left: 92% !important;
 }
 
 [class*=focusLock] [class*=textArea] > div > div {
-    padding: 0;
+    padding: 0 !important;
 }
 
 .vc-rdb-input [class*=textArea] > div:first-child {
-    float: right;
-    width: 90%;
+    float: right !important;
+    width: 90% !important;
 }
 
 .vc-rdb-input [class*=textArea] > div:first-child > * {
-    padding-top: 3px;
+    padding-top: 3px !important;
 }
 
 .vc-rdb-input [class*=textArea] > div:first-child > div:first-child {
-    float: right;
+    float: right !important;
 }
 
 /*---Lock Icon Recolor---*/
@@ -636,30 +635,30 @@ img { border-radius: 5px !important; }
 /* Change Content within "New" message divider */
 #---new-messages-bar {  }
 
-[class*=channelInfo] { display: none; }
+[class*=channelInfo] { display: none !important; }
 
 #my-account-tab > div > div:first-child, [class*=userSettingsSecurity]:has([class*=sectionTitle]), [class*=marginTop40]:has([class*=contents]) {
     border: 2px solid rgb(71, 71, 71);
-    border-radius: 10px;
+    border-radius: 10px !important;
     background-color: var(--background-primary);
-    padding: 10px;
+    padding: 10px !important;
 }
 
 [class*=marginTop40] > div :has([class*=noWrap]) { 
     border: 0;
-    padding: 0;
+    padding: 0 !important;
 }
 
 
 [class*=sidebarRegion] > div {
     border: 2px solid rgb(71, 71, 71);
-    margin: 10px;
-    border-radius: 10px;
+    margin: 10px !important;
+    border-radius: 10px !important;
 }
 
 [class*=standardSidebarView] > div[class*=sidebarRegion] { background-color: #141414; }
 [class*=layer] div[class*=contentRegion] > div > div { background-color: #141414 !important; }
-[class*=userSettingsSecurity] { padding: 20px; }
+[class*=userSettingsSecurity] { padding: 20px !important; }
 [class*=sectionTitle]:has([id=":r6r:"]) > h2 { color: white; }
 
 /*discord loading page*/
@@ -675,13 +674,13 @@ img { border-radius: 5px !important; }
 /* Shows hover on messages */
 [aria-label*="Messages in "] [class*=messageListItem] {
   transition: 300ms ease-in;
-  border-radius: 5px;
-  margin-top: 5px;
+  border-radius: 5px !important;
+  margin-top: 5px !important;
 
   &:hover {
     background-color: rgba(203,0,184,0.25);
-    border-radius: 5px;
-    margin-top: 5px;
+    border-radius: 5px !important;
+    margin-top: 5px !important;
     transition: 250ms ease-out;
   }
 }
@@ -708,5 +707,5 @@ img { border-radius: 5px !important; }
 }
 
 [class*=expressionPickerPositionLayer] {
-    top: 20px;
+    top: 20px !important;
 }
