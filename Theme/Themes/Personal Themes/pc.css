@@ -244,17 +244,17 @@ main[aria-label=" (channel)"] [class*=sansAttachButton] {
 /*-------*/
 
 /* CHANGE SERVER ICON */
-[aria-label="  Feastables"] > img, [aria-label="Happy Time Talk Groups, folder "] > [class*=folderIconWrapper] > [class*=closedFolderIconWrapper] > div:nth-child(1) {
+foreignObject [aria-label*="Feastables"] > img, [aria-label="Happy Time Talk Groups, folder "] > [class*=folderIconWrapper] > [class*=closedFolderIconWrapper] > div:nth-child(1) {
     content: var(--feastables) !important;
     transform: scale(1);
 }
 
-[aria-label="  MrBeast"] > img, [aria-label="Happy Time Talk Groups, folder "] > [class*=folderIconWrapper] > [class*=closedFolderIconWrapper] > div:nth-child(2) {
+foreignObject [aria-label*="MrBeast"] > img, [aria-label="Happy Time Talk Groups, folder "] > [class*=folderIconWrapper] > [class*=closedFolderIconWrapper] > div:nth-child(2) {
     content: var(--mr-beast) !important;
     transform: scale(0.9);
 }
 
-[aria-label="  MrBeast Gaming"], [aria-label="Happy Time Talk Groups, folder "] > [class*=folderIconWrapper] > [class*=closedFolderIconWrapper] > div:nth-child(3) {
+foreignObject [aria-label*="MrBeast Gaming"], [aria-label="Happy Time Talk Groups, folder "] > [class*=folderIconWrapper] > [class*=closedFolderIconWrapper] > div:nth-child(3) {
     content: var(--mr-beast-gaming) !important;
     transform: scale(1);
 }
