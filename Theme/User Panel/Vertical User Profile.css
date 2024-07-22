@@ -1,0 +1,140 @@
+/* Vertical Profile */
+[aria-label="User Profile Modal"]:has([class*=small])
+[class*=userProfileModalInner] > [class*=body] {
+    flex-direction: row !important;
+
+    /* Username */
+    [class*=usernameRow_] {
+        justify-content: center !important;
+        padding-bottom: 10px;
+        margin-top: 2px;
+        gap: 0 !important;
+
+        position: absolute;
+        top: 21%;
+        left: 28%;
+    }
+
+    [class*=tags_] {
+        justify-content: center;
+        margin-top: 30px !important;
+        padding-bottom: 3px;
+        padding-left: 5px;
+        padding-right: 5px;
+
+        background-color: var(--bg-mod-faint);
+        border: 1px solid var(--border-faint);
+        border-radius: 5px;
+    }
+    [class*=pronouns] > [class*=dotSpacer] { 
+        display: none !important;
+    }
+}
+
+/* Expand pfp */ 
+[aria-label="User Profile Modal"]:has([class*=small])
+[class*=headerInner] svg[class*=svg_] {
+    height: calc(138px + 45%) !important;
+    transform: translate(5px, -25px);
+
+    circle{
+        r: 10;
+    }
+
+    rect {
+        width: 15px;
+        height: 15px;
+        x: 92.5;
+        y: 92.5;
+    }
+}
+
+/* Resizers the status circle */
+[id="svg-mask-avatar-status-round-120"] circle:last-child {
+    r: 0.115;
+}
+
+/* Expands Avatar Decoration */
+[aria-label="User Profile Modal"]:has([class*=small])
+[class*=headerInner] svg[class*=avatarDecoration_] {
+    height: calc(144px + 55%);
+    width:  calc(162px + 55%);
+    transform: translate(0px, -35px);
+}
+
+/* Expands height of user profile to hold full height */
+[aria-label="User Profile Modal"]:has([class*=small])
+[class*=userProfileOuter] {
+    height: 75vh !important;
+    width: 75vw !important;
+}
+
+/* Expands lower info section */
+[aria-label="User Profile Modal"]:has([class*=small]) 
+[class*=container]:has([class*=listScroller_]) [class*=listScroller] {
+    height: 47vh !important;
+    display: flex;
+    gap: 10px;
+    flex-direction: column;
+}
+
+/* If there is over 3 display in 3's */
+[aria-label="User Profile Modal"]:has([class*=small])
+[aria-label="User Badges"]:has(> div:nth-child(n+3)) {
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr) !important;
+    justify-items: center !important;
+}
+
+/* If there is under 3 display in 2's */
+[aria-label="User Profile Modal"]:has([class*=small])
+[aria-label="User Badges"]:has(> div:nth-child(n+2)) {
+    grid-template-columns: repeat(2, 1fr);
+}
+
+/* If more than 1 badge -> add 5px padding right */
+[aria-label="User Badges"]:has(> div:nth-child(n+2)) {
+    padding: 3px 5px 3px 3px !important;
+}
+
+/* If 1 badge -> add 6px padding right */
+[aria-label="User Badges"]:has(> div:only-child) {
+    padding: 3px 6px 3px 4px !important;
+}
+
+/* adds margin to space out info */
+[class*=userPopoutInner] [aria-label="User Badges"] { margin-top: 10px; }
+
+[aria-label="User Profile Modal"]:has([class*=small]) > [class*=userProfileOuter_] {
+    height: max-content !important;
+}
+
+/* Vertical Menu Options */
+[aria-label="User Profile Modal"]:has([class*=small])
+[class*=userProfileModalInner] [class*=tabBar] {
+    flex-direction: column !important;
+    gap: 10px;
+}
+
+[aria-label="User Profile Modal"]:has([class*=small])
+[class*=userProfileModalInner] [class*=overlay_] {
+    width: 100%;
+}
+
+[aria-label="User Profile Modal"]:has([class*=small])
+[class*=userProfileModalInner] [class*=themed_], /* Menu options */
+[aria-label="User Profile Modal"]:has([class*=small])
+[class*=userProfileModalInner] [class*=themed_]:hover,
+
+[aria-label="User Profile Modal"]:has([class*=small])
+[class*=userProfileModalInner] [class*=listRow], /* Displayed List */
+[aria-label="User Profile Modal"]:has([class*=small])
+[class*=userProfileModalInner] [class*=listRow]:hover {
+    transition: all 500ms;
+}
+
+/* Moves Info Section Down */
+[aria-label="User Profile Modal"]:has([class*=small])
+[class*=body_] [class*=overlay_] {
+    margin-top: 30px;
+}
