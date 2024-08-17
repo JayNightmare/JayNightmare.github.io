@@ -1,18 +1,17 @@
 /* Servers */
-[class*=listItem-] [class*=wrapper-2PSQCG],
-[class*=listItem-] [class*=wrapper-] > svg >
+[class*=listItem_] [class*=wrapper_] > svg >
 foreignObject { mask: none !important; border-radius: 5px; } /* <- DO NOT DELETE */
 
 /* Makes Folder background transparent */
-.folderIconWrapper-1oRIZr { background: transparent !important; }
+[class*=folderIconWrapper] { background: transparent !important; }
 
 /* Moves the server speaker icon that appears when you join a vc */
-.wrapper-2PSQCG > .upperBadge-1d6YsW { position: absolute; margin: 18px 15px 0; } /* *roughly* center */
+[class*=wrapper_] > [class*=upperBadge] { position: absolute; margin: 18px 15px 0; } /* *roughly* center */
 
 /* Changes the server speaker icon that appears when you join a vc */
-div.upperBadge-1d6YsW path { color: rgb(134, 237, 255) !important; } /* <- cyan */
+[class*=upperBadge] path { color: rgb(134, 237, 255) !important; } /* <- cyan */
 
-.iconBadge-32fMme {
+[class*=iconBadge] {
     box-shadow: inset 0 0 0 1.5px rgb(255, 65, 214), /* <- pink */
     inset 0 0 0 3px var(--background-secondary) !important; /* <- gray discord color */
     transform: scale(1.25);
