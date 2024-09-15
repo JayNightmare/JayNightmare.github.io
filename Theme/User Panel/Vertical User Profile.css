@@ -125,7 +125,6 @@
 [class*=userProfileModalInner] [class*=themed_], /* Menu options */
 [aria-label="User Profile Modal"]:has([class*=small])
 [class*=userProfileModalInner] [class*=themed_]:hover,
-
 [aria-label="User Profile Modal"]:has([class*=small])
 [class*=userProfileModalInner] [class*=listRow], /* Displayed List */
 [aria-label="User Profile Modal"]:has([class*=small])
@@ -178,6 +177,14 @@
 [aria-label="User Badges"], [class*=statusBubbleOuter],
 [class*=statusBubbleOuter]::before, [class*=statusBubbleOuter]::after {
     animation: badge-gradient 5s ease-in-out infinite !important;
+}
+
+@keyframes badge-gradient {
+    0%   { border-color: #800080; } /* Purple */
+    25%  { border-color: #9370DB; } /* Medium Purple */
+    50%  { border-color: #BA55D3; } /* Medium Orchid */
+    75%  { border-color: #DA70D6; } /* Orchid */
+    100% { border-color: #800080; } /* Purple */
 }
 
 [aria-label="User Badges"] { padding: 3px 5px 3px 5px; }
