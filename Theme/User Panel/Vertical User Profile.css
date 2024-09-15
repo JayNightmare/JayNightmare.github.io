@@ -169,3 +169,7 @@
 [aria-label="User Profile Modal"]:has([class*=small]) [class*=body_] [class*=overlay_], [class*=overlayBackground][class*=friendRequestBannerOverlay] {
     margin-top: 30px;
 }
+
+[class*=fullSizeOverlayBackground][class*=overlayBackground][class*=overlay] {
+    height: auto;
+}
