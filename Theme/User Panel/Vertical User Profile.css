@@ -173,3 +173,12 @@
 [class*=fullSizeOverlayBackground][class*=overlayBackground][class*=overlay] {
     height: auto;
 }
+
+/* User Badge */
+[aria-label="User Badges"], [class*=statusBubbleOuter],
+[class*=statusBubbleOuter]::before, [class*=statusBubbleOuter]::after {
+    animation: badge-gradient 5s ease-in-out infinite !important;
+}
+
+[aria-label="User Badges"] { padding: 3px 5px 3px 5px; }
+[class*=userPopoutInner] [aria-label="User Badges"] { margin-top: 10px; }
