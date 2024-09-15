@@ -138,3 +138,29 @@
 [class*=body_] [class*=overlay_] {
     margin-top: 30px;
 }
+
+[class*=headerInner] > div:nth-child(2):has([class*=fullSize]) {
+    position: relative;
+    top: -10px;
+    left: 50px;
+
+    [class*=statusBubbleOuter]:before {
+        left: -10px !important;
+        top: 5px
+    }
+
+    [class*=statusBubbleOuter]:after {
+        left: -30px !important;
+        top: -5px
+    }
+}
+
+[class*=usernameRow_] {
+    z-index: 1000;
+    top: 400px !important;
+    left: 28% !important;
+}
+
+[aria-label="User Profile Modal"]:has([class*=small]) [class*=body_] [class*=overlay_] [class*=container_] {
+    margin-top: 35px;
+}
