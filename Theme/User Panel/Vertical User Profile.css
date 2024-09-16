@@ -53,7 +53,7 @@
 [id="svg-mask-avatar-status-round-120"] circle:last-child {
     r: 0.115;
 }
-
+ 
 /* Expands Avatar Decoration */
 [aria-label="User Profile Modal"]:has([class*=small])
 [class*=headerInner] svg[class*=avatarDecoration_] {
