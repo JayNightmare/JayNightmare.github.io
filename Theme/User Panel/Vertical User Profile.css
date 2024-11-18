@@ -1,35 +1,47 @@
 /* Vertical Profile */
-[aria-label="User Profile Modal"]:has([class*=small])
+
+/* [aria-label="User Profile Modal"]:has([class*=small])
 [class*=userProfileModalInner] > [class*=body] {
     flex-direction: row !important;
 
     /* Username */
-    [class*=usernameRow_] {
+    [class*=fullSize] [class*=usernameRow_]:has([class*=nicknameIcons]) {
         justify-content: center !important;
-        padding-bottom: 10px;
-        margin-top: 2px;
-        gap: 0 !important;
+        margin-bottom: -10px;
+        margin-top: 20px;
+        
+        /* gap: 0 !important; */
 
-        position: absolute;
-        top: 21%;
-        left: 28%;
+        /* position: absolute; */
+        /* top: 21%; */
+        /* left: 28%; */
+
+        [class*=heading] {
+            font-size: 50px !important;
+        }
     }
 
-    [class*=tags_] {
+    [class*=fullSize] [class*=tags_]:has([class*=userTag]) {
+        /* flex-direction: column !important; */
         justify-content: center;
+
         margin-top: 30px !important;
-        padding-bottom: 3px;
+        padding-top: 10px;
+        padding-bottom: 13px;
         padding-left: 5px;
         padding-right: 5px;
 
         background-color: var(--bg-mod-faint);
         border: 1px solid var(--border-faint);
         border-radius: 5px;
+        
+        gap: 100px;
     }
+
     [class*=pronouns] > [class*=dotSpacer] { 
         display: none !important;
     }
-}
+/* } */
 
 /* Expand pfp */ 
 [aria-label="User Profile Modal"]:has([class*=small])
@@ -38,8 +50,13 @@
     transform: translate(5px, -25px);
 
     circle{
-        r: 13;
+        r: 10.6;
     }
+
+    /* foreignObject {
+        width: 100px;
+        height: 100px;
+    } */
 
     rect {
         width: 15px;
@@ -47,11 +64,22 @@
         x: 92.5;
         y: 92.5;
     }
-}
+} 
 
 /* Resizers the status circle */
+[id="svg-mask-avatar-status-mobile-120"] rect {
+    width: 0.26px;
+    height: 0.45px;
+    x: 0.715px;
+    y: 0.715;
+}
+
 [id="svg-mask-avatar-status-round-120"] circle:last-child {
-    r: 0.115;
+    width: 0.26px;
+    height: 0.45px;
+    x: 0.715px;
+    y: 0.715;
+    r: 0.09;
 }
  
 /* Expands Avatar Decoration */
@@ -64,7 +92,7 @@
 
 /* Expands height of user profile to hold full height */
 [aria-label="User Profile Modal"]:has([class*=small])
-[class*=userProfileOuter] {
+[class*=outer_c69a7b ] {
     height: 75vh !important;
     width: 75vw !important;
 }
@@ -159,11 +187,6 @@
     top: 400px !important;
     left: 28% !important;
 }
-
-[aria-label="User Profile Modal"]:has([class*=small]) [class*=body_] [class*=overlay_] [class*=container_] {
-    margin-top: 35px;
-}
-
 
 [aria-label="User Profile Modal"]:has([class*=small]) [class*=body_] [class*=overlay_], [class*=overlayBackground][class*=friendRequestBannerOverlay] {
     margin-top: 30px;
