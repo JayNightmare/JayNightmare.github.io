@@ -93,7 +93,7 @@
 /* Expands height of user profile to hold full height */
 [aria-label="User Profile Modal"]:has([class*=small])
 [class*=outer_c69a7b ] {
-    height: 75vh !important;
+    height: 100% !important;
     width: 75vw !important;
 }
 
