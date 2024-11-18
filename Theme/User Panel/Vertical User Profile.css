@@ -139,24 +139,24 @@
 
 /* Vertical Menu Options */
 [aria-label="User Profile Modal"]:has([class*=small])
-[class*=userProfileModalInner] [class*=tabBar] {
+[class*=fullSize] [class*=tabBar] {
     flex-direction: column !important;
     gap: 10px;
 }
 
 [aria-label="User Profile Modal"]:has([class*=small])
-[class*=userProfileModalInner] [class*=overlay_] {
+[class*=fullSize] [class*=overlay_] {
     width: 100%;
 }
 
 [aria-label="User Profile Modal"]:has([class*=small])
-[class*=userProfileModalInner] [class*=themed_], /* Menu options */
+[class*=fullSize] [class*=themed_], /* Menu options */
 [aria-label="User Profile Modal"]:has([class*=small])
-[class*=userProfileModalInner] [class*=themed_]:hover,
+[class*=fullSize] [class*=themed_]:hover,
 [aria-label="User Profile Modal"]:has([class*=small])
-[class*=userProfileModalInner] [class*=listRow], /* Displayed List */
+[class*=fullSize] [class*=listRow], /* Displayed List */
 [aria-label="User Profile Modal"]:has([class*=small])
-[class*=userProfileModalInner] [class*=listRow]:hover {
+[class*=fullSize] [class*=listRow]:hover {
     transition: all 500ms;
 }
 
