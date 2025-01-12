@@ -707,3 +707,54 @@ img { border-radius: 5px !important; }
 [class*=expressionPickerPositionLayer] {
     top: 20px !important;
 }
+
+/* Fixed Buttons in vertical view */
+
+[aria-label="User area"] [class*=actionButtons] {
+    display: flex;
+    flex-direction: column;
+}
+
+[class*=sidebar]:has([aria-label="Private channels"]) [aria-label="User area"] [class*=voiceButtonsContainer] {
+    display: flex;
+    flex-direction: column;
+}
+
+[class*=sidebar]:has([aria-label="Private channels"]) [aria-label="User area"] > div:nth-child(2) [class*=inner]:has([class*=rtcConnectionStatusWrapper]) {
+    flex: 0;
+    min-width: -webkit-fill-available;
+
+    [class*=rtcConnectionStatusWrapper] > [class*=rtcConnectionStatus] {
+        flex-wrap: wrap;
+
+        [class*=rtcConnectionStatusConnected] div {
+            white-space: wrap;
+            font-size: 10px;
+        }
+
+        button {
+            width: 49.88px;
+        }
+    }
+
+    a > [class*=subtext] {
+        text-wrap: wrap;
+        padding-right: 2px;
+    }
+}
+
+[class*=sidebar]:has([aria-label="Private channels"]) [aria-label="User area"] > [class*=activityPanel] > div:first-child {
+    flex-direction: column;
+
+    div:first-child {
+        flex-direction: column;
+
+        div:nth-child(2) {
+            margin: 0;
+        }
+    }
+
+    div:last-child {
+        margin: 0
+    }
+}
