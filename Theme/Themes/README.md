@@ -1,11 +1,19 @@
 # Themes
 1. Personal Themes:
+   - CSS Import Links
+   ```css
+   /* PC Theme - Vertical */
+   @import url('https://jaynightmare.github.io/Discord-Themes/Theme/Themes/Personal%20Themes/pc.css');
+     
+   /* Vertical User Profile */
+   @import url('https://JayNightmare.github.io/Discord-Themes/Theme/User%20Panel/Vertical%20User%20Profile.css');
+   ```
      - These are use on a daily and is regularly updated with new stuff. There are 2 personal themes I use, one for my laptop and the other for my pc
      - My laptop theme has basic changes as I mainly mess around with snippets. So I stuff in that file is what I drive when not testing.
      - My PC theme on the other hand is for a vertical layout and has features that make use of the vertical space. Each module is labelled and is future proofed to make sure that classes don't break.
   
 
-2. Rest of the themes:
+3. Rest of the themes:
 
   - ### AMOLED-Cord Theme:
 My fiest attempt at making a theme. Was a fork of the AMOLED theme from betterdiscord theme page so I could have a foundation to go from and learn.
