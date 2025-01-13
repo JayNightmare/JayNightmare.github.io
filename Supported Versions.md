@@ -6,6 +6,12 @@ Open an issue with any vulnerabilities/problems that you find.
 
 # Supported Theme Versions
 
+## PC.css - Vertical Screen Layout
+| Version | Supported          | Available          |
+| ------- | ------------------ | -----------------  |
+| 0.7.8   | :white_check_mark: | :white_check_mark: |
+> See version in file
+
 ## Classic-Discord.css
 | Version | Supported          | Available          |
 | ------- | ------------------ | -----------------  |
