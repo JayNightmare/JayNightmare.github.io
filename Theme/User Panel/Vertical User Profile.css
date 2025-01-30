@@ -166,20 +166,10 @@
     margin-top: 30px;
 }
 
-[class*=headerInner] > div:nth-child(2):has([class*=fullSize]) {
+[class*=headerInner] > div:has([class*=fullSize]) {
     position: relative;
-    top: -10px;
-    left: 50px;
-
-    [class*=statusBubbleOuter]:before {
-        left: -10px !important;
-        top: 5px
-    }
-
-    [class*=statusBubbleOuter]:after {
-        left: -30px !important;
-        top: -5px
-    }
+    top: 5px;
+    left: -120px;
 }
 
 [class*=usernameRow_] {
@@ -196,9 +186,10 @@
     height: auto;
 }
 
-/* User Badge */
-[aria-label="User Badges"], [class*=statusBubbleOuter],
-[class*=statusBubbleOuter]::before, [class*=statusBubbleOuter]::after {
+/* User Bio */
+[aria-label="User Badges"], header div:is([role="tooltip"]) div:has([class*="statusText"]),
+header div:is([role="tooltip"]) div:has([class*="statusText"])::before,
+header div:is([role="tooltip"]) div:has([class*="statusText"])::after {
     animation: badge-gradient 5s ease-in-out infinite !important;
 }
 
