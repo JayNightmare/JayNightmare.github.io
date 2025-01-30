@@ -758,3 +758,327 @@ img { border-radius: 5px !important; }
         margin: 0
     }
 }
+
+/* //////////// */
+
+[class*=channelInfo] {
+    display: block !important;
+}
+/* //// */
+
+/* Quest Tab above user area */
+[aria-label="User area"] { background-color: transparent !important; }
+
+[aria-label="User area"] [class*=contentCollapsed]:is([aria-hidden="false"]),
+[aria-label="User area"] [class*=contentExpanded]:is([aria-hidden="false"]) {
+    border-top: 2px solid rebeccapurple;
+    border-left: 2px solid rebeccapurple;
+    border-right: 2px solid rebeccapurple;
+    border-radius: 8px 8px 0px 0px;
+
+    animation: quest-gradient 10s ease-in-out infinite !important;
+}
+
+[class*=form]:has([class*=bodyContainer]) [class*=textArea] {
+    height: fit-content !important;
+}
+
+[class*=form]:has([class*=bodyContainer]) [class*=inner],
+[class*=form]:has([class*=bodyContainer]) [class^="channelTextArea"] > div {
+    background-color: transparent;
+    width: 100% !important;
+    border: none !important;
+}
+
+/* Animation */
+@keyframes quest-gradient {
+    0%   { border-color: #FFD700; } /* Gold */
+    25%  { border-color: #FF69B4; } /* Hot Pink */
+    50%  { border-color: #32CD32; } /* Lime Green */
+    75%  { border-color: #1E90FF; } /* Dodger Blue */
+    100% { border-color: #FFD700; } /* Gold */
+}
+
+/* Make the quest tab look better :D */
+[class*=sidebar]:has([aria-label="Private channels"]) [class*=questAcceptedContent] [class*=headingWrapper],
+[class*=sidebar]:has([aria-label="Private channels"]) [class*=questAcceptedContent] [class*=questProgressWrapper] div:nth-child(2),
+[class*=sidebar]:has([aria-label="Private channels"]) [class*=questAcceptedContent] [class*=microphoneUnit],
+[class*=sidebar]:has([aria-label="Private channels"]) [class*=questAcceptedContent] [class*=stepWrapper] [class*=stepContent] {
+    display: none;
+}
+
+[class*=sidebar]:has([aria-label="Private channels"]) [class*=questAcceptedContent] [class*=questProgressWrapper] {
+    justify-content: center;
+}
+
+[class*=sidebar]:has([aria-label="Private channels"]) [class*=questAcceptedContent] [class*=questAcceptedHeader] [class*=defaultColor] {
+    text-align: center;
+    position: relative !important;
+    left: -6.5px !important;
+}
+
+[class*=sidebar]:has([aria-label="Private channels"]) [class*=questAcceptedContent] [class*=stepsWrapper] ul {
+    margin-top: 10px;
+}
+
+[class*=sidebar]:has([aria-label="Private channels"]) [class*=questAcceptedContent] [class*=wrapper] {
+    width: calc(100% + 7px);
+    position: relative !important;
+    left: -4px !important;
+}
+
+[class*=sidebar]:has([aria-label="Private channels"]) [class*=questAcceptedContent] [class*=stepWrapper]:not(:last-child) {
+    height: 100px !important;
+}
+
+[class*=sidebar]:has([aria-label="Private channels"]) [class*=contentCollapsed]:is([aria-hidden="false"]) [class*=questProgressWrapper] div:first-child {
+    transform: translateY(-5px) !important;
+}
+
+[class*=sidebar]:has([aria-label="Private channels"]) [class*=contentCollapsed]:is([aria-hidden="false"]) [class*=questProgressWrapper] div[class*=outer_] {
+    transform: translateY(-15.5px) !important;
+}
+
+[class*=sidebar]:has([aria-label="Private channels"]) [class*=contentCollapsedWrapper] [class*=questProgressWrapper] {
+    gap: 1000px;
+    position: relative;
+    left: -1.55px;
+}
+/* //// */
+
+/* Fixing Placeholder Text */
+[class*="textArea_"] [class*=placeholder_] {
+    padding-left: 10px;
+}
+/* //// */
+
+/* //// */
+
+/* Hides Member and Channels */
+[class*=chat_] [class^=container_]:has([class*=membersWrap_]) {
+    transition: all 0.5s ease !important;
+    
+    [class*=membersWrap_]:has([class*=membersGroup_]) [class*=membersGroup_] {
+        display: none !important;
+    }
+
+    [class*=membersWrap_]:has([class*=membersGroup_]):hover [class*=membersGroup_] {
+        display: inherit !important;
+    }
+    
+    &:not(:hover) {
+        width: 60px;
+    }
+}
+
+/* //// */
+
+/* Fixes text box */
+[class*=scrollableContainer_] {
+    width: 100% !important;
+    overflow-y: visible;
+}
+
+[class*=sansAttachButton] {
+    width: 102% !important;   
+}
+
+/* App launcher reposition */
+[class*=chat_] [class*=channelAppLauncher_] {
+    position: absolute;
+    top: -50px;
+    right: 16px;
+}
+
+[class*=chat_] [aria-label="Apps"] {
+    background-color: inherit; /* Inherits color of the background - Mines #000 */
+    border: 2px solid;
+    animation: quest-gradient 10s ease-in-out infinite !important;
+}
+
+/* [class^=sidebar_]:has([class*=avatarWrapper_]), [class*=chat_] [class^=container_]:has([class*=membersWrap_]) {
+    transition: all 0.5s ease;
+    
+    [class*=membersWrap_]:has([class*=membersGroup_]) [class*=membersGroup_] {
+        display: none !important;
+    }
+
+    [class*=membersWrap_]:has([class*=membersGroup_]):hover [class*=membersGroup_] {
+        display: inherit !important;
+    }
+    
+    &:not(:hover) {
+        width: 00px;
+    }
+} */
+
+
+/* Code border */
+code > table > tr > td:nth-child(2) {
+    color: white !important;
+    font-weight: 600;
+}
+
+code > table > tr > td:nth-child(1) {
+    border-right: 1px solid white !important;
+    background-color: #441e46;
+    color: whitesmoke !important;
+    text-align: center;
+}
+
+code > table > tr:is(:only-child) > td:nth-child(1) {
+    border-radius: 5px 0 0 5px !important;
+}
+
+code > table > tr:is(:first-child) > td:nth-child(1) {
+    border-radius: 5px 0 0 0;
+}
+
+code > table > tr:is(:last-child) > td:nth-child(1) {
+    border-radius: 0 0 0 5px;
+}
+
+[class*=attachWrapper] {
+    align-self: flex-start;
+}
+
+[class*=expressionPickerPositionLayer] {
+    right: 78px !important;
+}
+
+[class*=buttonContainer] > [class*=buttons][aria-label="Message Actions"] > [class*=buttonsInner] {
+    background-color: black;
+    animation: quest-gradient 10s ease-in-out infinite !important;
+    border: 1px solid rgba(75, 75, 75, 0.75);
+
+    [class*=hoverBarButton] path {
+        fill: white !important;
+    }
+}
+
+[class*=layerContainer] [class*=disabledPointerEvents] > [class*=tooltip] {
+    border: 1px solid;
+    animation: quest-gradient 5s ease-in-out infinite !important;
+    background-color: black;
+}
+
+/* Everyone */
+[class*=avatarSpeaking] {
+  box-shadow: inset 0 0 0 2px #9370DB, inset 0 0 0 3px var(--background-secondary);
+}
+
+/* Sheep */
+[class*="avatarSpeaking"][style*="https://cdn.discordapp.com/avatars/989366946292170793/7d74dbb083d23ba5edac3781c1ec4695.webp?size=24"] {
+  box-shadow: inset 0 0 0 2px #e67e22, inset 0 0 0 3px var(--background-secondary);
+}
+
+/* Jay */
+[class*="avatarSpeaking"][style*="https://cdn.discordapp.com/avatars/373097473553727488/a_15232297e4e3e6f135a8dccdd798459f.gif?size=24"] {
+  box-shadow: inset 0 0 0 2px #e74dc6, inset 0 0 0 3px var(--background-secondary);
+}
+
+/* Frog */
+[class*="avatarSpeaking"][style*="https://cdn.discordapp.com/avatars/1127363999730761780/b774b7b4bcdb86cba367c7b0d5902c73.webp?size=24"] {
+  box-shadow: inset 0 0 0 2px #4de77b, inset 0 0 0 3px var(--background-secondary);
+}
+
+/* Minerd */
+[class*="avatarSpeaking"][style*="https://cdn.discordapp.com/avatars/702279444080885790/2616614caa3884ede052c1ed6f2c85c0.webp?size=24"] {
+  box-shadow: inset 0 0 0 2px #ffffff, inset 0 0 0 3px var(--background-secondary);
+}
+
+[class*=picker]:has([aria-label="Soundboard Volume"]) {
+    height: 1600px;
+    /* width: 900px; */
+}
+
+/* Mini Profile - Expand Bio */
+[class*=body][class*=thin][class*=scrollerBase][class*=fade] > div:nth-child(2):has([class*=descriptionClamp]) [class*=descriptionClamp],
+[class*=body][class*=thin][class*=scrollerBase][class*=fade] > div:nth-child(2):has([class*=descriptionClamp]) [class*=descriptionClamp][class*="maxBioHeight_"],
+[class*=body][class*=thin][class*=scrollerBase][class*=fade] > div:nth-child(3):has([class*=descriptionClamp]) [class*=descriptionClamp],
+[class*=body][class*=thin][class*=scrollerBase][class*=fade] > div:nth-child(3):has([class*=descriptionClamp]) [class*=descriptionClamp][class*="maxBioHeight_"],
+[class*=body][class*=thin][class*=scrollerBase][class*=fade] > div:nth-child(4):has([class*=descriptionClamp]) [class*=descriptionClamp],
+[class*=body][class*=thin][class*=scrollerBase][class*=fade] > div:nth-child(4):has([class*=descriptionClamp]) [class*=descriptionClamp][class*="maxBioHeight_"]
+{
+    max-height: none !important;
+    border: 1px solid var(--background-secondary);
+    border-radius: 3px;
+    height: 200px;
+    overflow: hidden;
+
+    div {
+        padding: 5px;
+        background-color: var(--background-tertiary);
+        height: 100%;
+        overflow: hidden;
+    }
+}
+
+[class*=body][class*=thin][class*=scrollerBase][class*=fade] > div:nth-child(2):has([class*=descriptionClamp]) button,
+[class*=body][class*=thin][class*=scrollerBase][class*=fade] > div:nth-child(3):has([class*=descriptionClamp]) button,
+[class*=body][class*=thin][class*=scrollerBase][class*=fade] > div:nth-child(4):has([class*=descriptionClamp]) button
+{
+    display: none !important;
+}
+
+/* //// */
+
+/* More Hieght to Bio Editor */
+[class^=channelTextArea] > [class*=bioTextArea] {
+    height: 500px;
+}
+
+/* Bio Input */
+[class*=channelTextArea] [class*=bioTextArea] [class*=profileBioInput] [role*=textbox] {
+    padding: 0 !important;
+    margin-left: 5px;
+    margin-top: 5px;
+}
+
+[class*=channelTextArea] [class*=bioTextArea] [class*=buttons] {
+    padding: 3px 0 !important;
+    margin-left: 5px;
+    margin-right: 1px;
+    margin-top: 5px;
+}
+
+.vc-rdb-input [class*=textArea] > div:first-child,
+.vc-rdb-input [class*=textArea] > div:first-child > div:first-child {
+    float: none !important;
+}
+
+/* /// LOADING SCREEN /// */
+
+/* Loading background */
+.container_e40c16 {
+    /* background-color: rgba(0, 0, 0, 0.75); */
+    filter: blur(10px);
+    z-index: 1 !important;
+}
+
+/* Discord Logo */
+.content_e40c16 {
+    border: 1px solid;
+    animation: quest-gradient 10s ease-in-out infinite !important;
+    border-radius: 5px;
+    /* background-color: ; */
+    z-index: 2 !important;
+}
+
+/* Colours */
+[class^=containerDefault] [class^=linkTop_] [aria-label*="Text"]  path          { fill: var(--text-channel-neon-alt); }
+[class^=containerDefault] [class^=linkTop_] [aria-label*="Voice"] path          { fill: var(--voice-channel-neon); }
+/* [class^=containerDefault] [class^=linkTop_] [aria-label*="Forum"] path          { fill: var(--forum-channel-neon-alt); }
+[class^=containerDefault] [class^=linkTop_] [aria-label*="Announcement"] path   { fill: var(--announcement-channel-neon); }
+[class^=containerDefault] [class^=linkTop_] [aria-label*="Stage"] path          { fill: var(--stage-channel-neon-alt); }
+[class^=containerDefault] [class^=linkTop_] [aria-label*="Rules"] path          { fill: var(--rules-channel-neon-alt); } */
+
+/* CHANGE ICON */
+/* [class^=containerDefault] [class^=linkTop_] [aria-label*="Text"]            { content: var(--text-channel-icon); width: 20px; border-radius: 5px; } */
+/* [class^=containerDefault] [class^=linkTop_] [aria-label*="Voice"]           { content: var(--voice-channel-icon); width: 20px; border-radius: 5px; } */
+[class^=containerDefault] [class^=linkTop_] [aria-label*="Forum"]           { content: var(--forum-channel-icon); width: 20px; border-radius: 5px; }
+[class^=containerDefault] [class^=linkTop_] [aria-label*="Announcement"]    { content: var(--announcement-channel-icon); width: 20px; border-radius: 5px; }
+[class^=containerDefault] [class^=linkTop_] [aria-label*="Stage"]           { content: var(--stage-channel-icon); width: 20px; border-radius: 5px; }
+[class^=containerDefault] [class^=linkTop_] [aria-label*="Rules"]           { content: var(--rules-channel-icon); width: 20px; border-radius: 5px; }
+
+/* //////// */
