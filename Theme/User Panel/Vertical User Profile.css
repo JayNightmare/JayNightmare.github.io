@@ -203,3 +203,8 @@ header div:is([role="tooltip"]) div:has([class*="statusText"])::after {
 
 [aria-label="User Badges"] { padding: 3px 5px 3px 5px; }
 [class*=userPopoutInner] [aria-label="User Badges"] { margin-top: 10px; }
+
+[aria-label="User Profile Modal"]:has([class*="usernameRow"]) > div > [class*="fullSize"] {
+    height: fit-content;
+    width: 50.5em;
+}
